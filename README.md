@@ -22,16 +22,34 @@ All dependencies for this project are listed in the `environment.yml` file.
 3.  **Create and activate the Conda environment using the `.yml` file**:
     ```bash
     conda env create -f environment.yml
-    conda activate weijie_hpt
+    conda activate env_name
     ```
 
 ## 2. Data Preparation
 
-Before training the model, the raw HDF5 trajectory data needs to be pre-processed.
+Before training, the raw HDF5 trajectory data needs to be placed in the correct directory and pre-processed.
 
 **Steps:**
-1.  **Place the Data**: Place the raw `.hdf5` trajectory data folders into the `data/<task_name>/<task_config>/data` directory. (Note: The `data/` directory is ignored by `.gitignore` and will not be uploaded to the repository).
-2.  **Run the Processing Script**: Execute the data processing script. This script will convert the HDF5 data into a `.pkl` cache to accelerate subsequent training runs.
+1.  **[IMPORTANT] Place the Data**: The data processing script is configured to look for data within its own directory structure. Place the raw `.hdf5` trajectory data folders into the following specific path:
+    
+    `policy/HPT/HPT/data/<task_name>/<task_config>/data/`
+    
+    For example, for the `place_container_plate` task, the final structure should be:
+    ```
+    RoboTwin-HPT/
+    └── policy/
+        └── HPT/
+            └── HPT/
+                └── data/
+                    └── place_container_plate/
+                        └── demo_clean/
+                            └── data/
+                                ├── episode0.hdf5
+                                └── ...
+    ```
+    (Note: The `policy/HPT/HPT/data/` directory is ignored by `.gitignore` and will not be uploaded to the repository).
+
+2.  **Run the Processing Script**: Execute the data processing script. This will convert the HDF5 data into a `.pkl` cache to accelerate subsequent training runs.
 
     ```bash
     # Format: python <script_path> <task_name> <task_config> <num_episodes>
@@ -44,9 +62,14 @@ Before training the model, the raw HDF5 trajectory data needs to be pre-processe
 Model training is initiated by the `train.py` script. All hyperparameters are defined in the configuration files.
 
 **Steps:**
-1.  **Check/Modify Configuration**:
-    * The core configuration file is located at `policy/HPT/HPT/experiments/configs/config.yaml`.
-    * Before starting a training run, review the parameters within this file, such as `episode_num`, `batch_size`, and the `network` architecture.
+1.  **[IMPORTANT] Configure Task Name**:
+    * Open the core configuration file located at: `policy/HPT/HPT/experiments/configs/config.yaml`.
+    * **Ensure the `task_name` parameter in this file matches the name of the data folder you intend to train on.** For example, to train on the data prepared above, it must be set to:
+      ```yaml
+      # in config.yaml
+      task_name: place_container_plate
+      ```
+    * This step is crucial for the script to load the correct dataset. You can also review other parameters like `episode_num`, `batch_size`, etc.
 
 2.  **Start Training**:
     ```bash
@@ -54,16 +77,14 @@ Model training is initiated by the `train.py` script. All hyperparameters are de
     ```
 
 3.  **Training Artifacts**:
-    * Model weights (`model.pth`)
-    * The corresponding configuration snapshot (`config.yaml`)
-    * ...and other logs will all be saved in the unique experiment directory mentioned above.
+    * Model weights (`model.pth`), the configuration snapshot (`config.yaml`), and other logs will be saved to a unique, timestamped directory under `output/`. 
 
 ## 4. Model Evaluation
 
 Model evaluation is performed using the `eval.sh` script.
 
 **Steps:**
-1.  **[IMPORTANT] Configure the Evaluation Target**:
+1.  **Configure the Evaluation Target**:
     * Open the `eval.sh` script file.
     * Find the `cfg` variable.
     * Modify its value to the path of the experiment directory from **Step 3** that you wish to evaluate. For example:
@@ -80,4 +101,4 @@ Model evaluation is performed using the `eval.sh` script.
     ```
 
 3.  **Evaluation Results**:
-    * Evaluation videos (`.mp4`) and result files (`_result.txt`) will be saved in the `eval_result/` directory. A unique sub-directory will also be created there based on the task name, policy name, and a timestamp.
+    * Evaluation videos (`.mp4`) and result files (`_result.txt`) will be saved in the `eval_result/` directory, inside a unique sub-directory created for this evaluation run.
