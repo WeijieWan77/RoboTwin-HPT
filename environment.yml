@@ -1,4 +1,4 @@
-name: weijie_hpt
+name: RoboTwin-HPT
 channels:
   - conda-forge
   - pytorch

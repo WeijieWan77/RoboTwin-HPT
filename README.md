@@ -22,7 +22,7 @@ All dependencies for this project are listed in the `environment.yml` file.
 3.  **Create and activate the Conda environment using the `.yml` file**:
     ```bash
     conda env create -f environment.yml
-    conda activate env_name
+    conda activate RoboTwin-HPT
     ```
 
 ## 2. Data Preparation
