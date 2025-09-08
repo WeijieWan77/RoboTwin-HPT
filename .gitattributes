@@ -1,0 +1,2 @@
+policy/HPT/hpt-xlarge/** filter=lfs diff=lfs merge=lfs -text
+policy/HPT/t5-base/** filter=lfs diff=lfs merge=lfs -text

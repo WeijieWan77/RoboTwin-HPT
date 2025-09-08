@@ -35,11 +35,9 @@ policy/HPT/data/ # 如果存在
 # 忽略所有评测结果
 eval_result/
 
-# 忽略所有训练产物和预训练模型
+# 忽略所有训练产物
 policy/HPT/output/
 policy/HPT/outputs/
-policy/HPT/hpt-xlarge/
-policy/HPT/t5-base/
 
 # 忽略所有 3D 模型等资源文件
 assets/objects/
