@@ -1,0 +1,207 @@
+2025-08-31 12:12:38,913 INFO    StreamThr :4193853 [internal.py:wandb_internal():86] W&B internal server running at pid: 4193853, started at: 2025-08-31 12:12:38.912059
+2025-08-31 12:12:38,915 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: status
+2025-08-31 12:12:38,917 INFO    WriterThread:4193853 [datastore.py:open_for_write():85] open: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/run-uvcg3rt3.wandb
+2025-08-31 12:12:38,918 DEBUG   SenderThread:4193853 [sender.py:send():382] send: header
+2025-08-31 12:12:38,919 DEBUG   SenderThread:4193853 [sender.py:send():382] send: run
+2025-08-31 12:12:38,930 INFO    SenderThread:4193853 [sender.py:_maybe_setup_resume():763] checking resume status for None/hpt-transfer/uvcg3rt3
+2025-08-31 12:12:40,082 INFO    SenderThread:4193853 [dir_watcher.py:__init__():211] watching files in: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files
+2025-08-31 12:12:40,082 INFO    SenderThread:4193853 [sender.py:_start_run_threads():1136] run started: uvcg3rt3 with start time 1756613558.910497
+2025-08-31 12:12:40,087 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: check_version
+2025-08-31 12:12:40,087 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: check_version
+2025-08-31 12:12:40,501 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: run_start
+2025-08-31 12:12:40,516 DEBUG   HandlerThread:4193853 [system_info.py:__init__():32] System info init
+2025-08-31 12:12:40,516 DEBUG   HandlerThread:4193853 [system_info.py:__init__():47] System info init done
+2025-08-31 12:12:40,516 INFO    HandlerThread:4193853 [system_monitor.py:start():194] Starting system monitor
+2025-08-31 12:12:40,517 INFO    SystemMonitor:4193853 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-08-31 12:12:40,517 INFO    HandlerThread:4193853 [system_monitor.py:probe():214] Collecting system info
+2025-08-31 12:12:40,519 INFO    SystemMonitor:4193853 [interfaces.py:start():190] Started cpu monitoring
+2025-08-31 12:12:40,520 INFO    SystemMonitor:4193853 [interfaces.py:start():190] Started disk monitoring
+2025-08-31 12:12:40,521 INFO    SystemMonitor:4193853 [interfaces.py:start():190] Started gpu monitoring
+2025-08-31 12:12:40,522 INFO    SystemMonitor:4193853 [interfaces.py:start():190] Started memory monitoring
+2025-08-31 12:12:40,522 INFO    SystemMonitor:4193853 [interfaces.py:start():190] Started network monitoring
+2025-08-31 12:12:40,567 DEBUG   HandlerThread:4193853 [system_info.py:probe():196] Probing system
+2025-08-31 12:12:40,568 DEBUG   HandlerThread:4193853 [system_info.py:_probe_git():181] Probing git
+2025-08-31 12:12:40,575 DEBUG   HandlerThread:4193853 [system_info.py:_probe_git():189] Probing git done
+2025-08-31 12:12:40,575 DEBUG   HandlerThread:4193853 [system_info.py:probe():244] Probing system done
+2025-08-31 12:12:40,576 DEBUG   HandlerThread:4193853 [system_monitor.py:probe():223] {'os': 'Linux-6.8.0-65-generic-x86_64-with-glibc2.35', 'python': '3.10.18', 'heartbeatAt': '2025-08-31T04:12:40.567505', 'startedAt': '2025-08-31T04:12:38.906574', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py', 'codePathLocal': 'train.py', 'codePath': 'RoboTwin/policy/HPT/train.py', 'git': {'remote': 'https://github.com/ZixuanLi2004/Robotwin_hpt.git', 'commit': '916e51b13b2936933d1ad1ceb61024df3a193d2f'}, 'email': 'jiawei2006@gmail.com', 'root': '/data0/lumina/weijie/Robotwin_hpt', 'host': 'ubun', 'username': 'lumina', 'executable': '/home/lumina/miniconda3/envs/weijie_hpt/bin/python3', 'cpu_count': 64, 'cpu_count_logical': 128, 'cpu_freq': {'current': 1029.4388359375002, 'min': 800.0, 'max': 3400.0}, 'cpu_freq_per_core': [{'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 763.48, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2599.973, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.026, 'min': 800.0, 'max': 3400.0}, {'current': 2599.973, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 795.888, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.026, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 1990.358, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 2599.973, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.026, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 2600.026, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 2100.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.026, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 2099.978, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 2099.978, 'min': 800.0, 'max': 3400.0}, {'current': 2599.973, 'min': 800.0, 'max': 3400.0}, {'current': 2600.026, 'min': 800.0, 'max': 3400.0}, {'current': 2100.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.026, 'min': 800.0, 'max': 3400.0}, {'current': 2599.973, 'min': 800.0, 'max': 3400.0}, {'current': 2593.571, 'min': 800.0, 'max': 3400.0}, {'current': 2100.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 775.903, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2599.973, 'min': 800.0, 'max': 3400.0}, {'current': 2595.362, 'min': 800.0, 'max': 3400.0}, {'current': 2586.884, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 2599.973, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2599.973, 'min': 800.0, 'max': 3400.0}, {'current': 2599.973, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 2100.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.026, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 1832.815, 'min': 800.0, 'max': 3400.0}, {'current': 2599.973, 'min': 800.0, 'max': 3400.0}, {'current': 2599.973, 'min': 800.0, 'max': 3400.0}, {'current': 2100.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 2100.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.026, 'min': 800.0, 'max': 3400.0}, {'current': 2100.0, 'min': 800.0, 'max': 3400.0}, {'current': 1351.735, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}, {'current': 2600.026, 'min': 800.0, 'max': 3400.0}, {'current': 2598.37, 'min': 800.0, 'max': 3400.0}, {'current': 2330.891, 'min': 800.0, 'max': 3400.0}, {'current': 2100.021, 'min': 800.0, 'max': 3400.0}], 'disk': {'/': {'total': 1758.3374824523926, 'used': 1541.5285835266113}}, 'gpu': 'NVIDIA GeForce RTX 4090', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}], 'memory': {'total': 1007.5125045776367}}
+2025-08-31 12:12:40,576 INFO    HandlerThread:4193853 [system_monitor.py:probe():224] Finished collecting system info
+2025-08-31 12:12:40,576 INFO    HandlerThread:4193853 [system_monitor.py:probe():227] Publishing system info
+2025-08-31 12:12:40,576 DEBUG   HandlerThread:4193853 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2025-08-31 12:12:40,576 DEBUG   HandlerThread:4193853 [system_info.py:_save_pip():68] Saving pip packages done
+2025-08-31 12:12:40,576 DEBUG   HandlerThread:4193853 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2025-08-31 12:12:41,085 INFO    Thread-12 :4193853 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/requirements.txt
+2025-08-31 12:12:41,085 INFO    Thread-12 :4193853 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/conda-environment.yaml
+2025-08-31 12:12:44,717 DEBUG   HandlerThread:4193853 [system_info.py:_save_conda():87] Saving conda packages done
+2025-08-31 12:12:44,720 INFO    HandlerThread:4193853 [system_monitor.py:probe():229] Finished publishing system info
+2025-08-31 12:12:44,724 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: status_report
+2025-08-31 12:12:44,725 DEBUG   SenderThread:4193853 [sender.py:send():382] send: files
+2025-08-31 12:12:44,725 INFO    SenderThread:4193853 [sender.py:_save_file():1392] saving file wandb-metadata.json with policy now
+2025-08-31 12:12:44,731 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: stop_status
+2025-08-31 12:12:44,731 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: stop_status
+2025-08-31 12:12:44,734 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: internal_messages
+2025-08-31 12:12:45,084 INFO    Thread-12 :4193853 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/conda-environment.yaml
+2025-08-31 12:12:45,084 INFO    Thread-12 :4193853 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/wandb-metadata.json
+2025-08-31 12:12:45,248 DEBUG   SenderThread:4193853 [sender.py:send():382] send: telemetry
+2025-08-31 12:12:45,255 ERROR   wandb-upload_0:4193853 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/wanweijie2005-/hpt-transfer/uvcg3rt3/wandb-metadata.json?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250831%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250831T041245Z&X-Goog-Expires=86399&X-Goog-Signature=aec240ae9c652c22552a6c5849a1dfd1a52e60d49de271803713ac453ea09e8d5bd7ebd2e0cbf8d91d07f057298d89c2cb2e14d3a1bd2e30d838eca25a681698abef9c2718cdb3dc3762f7f2ab4671599f3c2842378e59e1b4182d4392c348f7d6b6d7f60eee75d071d4660fbdeec6efd1bf2c7fb8f167b6f90b247790a5499f1af6b4ba39216320077b00ccf21a07a89c3cc2ac8a6d3377add7a8a7e19b44c3f54ae9c2784e6b0f3a406a026ed9f72de07fda588d1e47ee3d15a5db63fa4734c8ceecdcea7ef5844b1881c7059bd9060dfbf921258c7d35614c4fa753f99a2615918f442d394997e7434cceccf610e7c14b2f76c3c3b25310859e6e7f09822a&X-Goog-SignedHeaders=host&X-User=wanweijie2005: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-08-31 12:12:45,255 ERROR   wandb-upload_0:4193853 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '15471'}
+2025-08-31 12:12:45,255 ERROR   wandb-upload_0:4193853 [internal_api.py:upload_file():2765] upload_file response body: 
+2025-08-31 12:12:46,084 INFO    Thread-12 :4193853 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/output.log
+2025-08-31 12:12:46,520 ERROR   wandb-upload_0:4193853 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/wanweijie2005-/hpt-transfer/uvcg3rt3/wandb-metadata.json?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250831%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250831T041245Z&X-Goog-Expires=86399&X-Goog-Signature=aec240ae9c652c22552a6c5849a1dfd1a52e60d49de271803713ac453ea09e8d5bd7ebd2e0cbf8d91d07f057298d89c2cb2e14d3a1bd2e30d838eca25a681698abef9c2718cdb3dc3762f7f2ab4671599f3c2842378e59e1b4182d4392c348f7d6b6d7f60eee75d071d4660fbdeec6efd1bf2c7fb8f167b6f90b247790a5499f1af6b4ba39216320077b00ccf21a07a89c3cc2ac8a6d3377add7a8a7e19b44c3f54ae9c2784e6b0f3a406a026ed9f72de07fda588d1e47ee3d15a5db63fa4734c8ceecdcea7ef5844b1881c7059bd9060dfbf921258c7d35614c4fa753f99a2615918f442d394997e7434cceccf610e7c14b2f76c3c3b25310859e6e7f09822a&X-Goog-SignedHeaders=host&X-User=wanweijie2005: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-08-31 12:12:46,520 ERROR   wandb-upload_0:4193853 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '15471'}
+2025-08-31 12:12:46,520 ERROR   wandb-upload_0:4193853 [internal_api.py:upload_file():2765] upload_file response body: 
+2025-08-31 12:12:47,321 WARNING FileStreamThread:4193853 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x7326df9ff190>>, timeout=180), args: ('https://api.wandb.ai/files/wanweijie2005-/hpt-transfer/uvcg3rt3/file_stream',), kwargs: {'json': {'files': {'output.log': {'offset': 0, 'content': ['2025-08-31T04:12:47.253487 train policy models with pretrained: ./hpt-xlarge!\n', '2025-08-31T04:12:47.253487 wandb url: https://wandb.ai/wanweijie2005-/hpt-transfer/runs/uvcg3rt3\n', '2025-08-31T04:12:47.253487  >>>dataset_path: data/zarr_Robotwin_resnet_traj50_multiview load_from_cache: True\n', '2025-08-31T04:12:47.253487 Robotwin size: 6086 episodes: 50 train: 45 eval: 5\n', "2025-08-31T04:12:47.253487 data keys: KeysView(<zarr.hierarchy.Group '/data' read-only>)\n", '2025-08-31T04:12:47.253487 Using device: cuda\n', '2025-08-31T04:12:47.253487 load pretrained trunk config\n']}}, 'dropped': 0}}
+2025-08-31 12:12:48,085 INFO    Thread-12 :4193853 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/output.log
+2025-08-31 12:12:49,688 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: status_report
+2025-08-31 12:12:49,694 INFO    wandb-upload_0:4193853 [upload_job.py:push():131] Uploaded file /tmp/tmp1e0djw0fwandb/qwap7jwg-wandb-metadata.json
+2025-08-31 12:12:50,086 INFO    Thread-12 :4193853 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/output.log
+2025-08-31 12:12:51,087 INFO    Thread-12 :4193853 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/output.log
+2025-08-31 12:12:51,201 DEBUG   SenderThread:4193853 [sender.py:send():382] send: exit
+2025-08-31 12:12:51,202 INFO    SenderThread:4193853 [sender.py:send_exit():589] handling exit code: 1
+2025-08-31 12:12:51,202 INFO    SenderThread:4193853 [sender.py:send_exit():591] handling runtime: 10
+2025-08-31 12:12:51,202 INFO    SenderThread:4193853 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2025-08-31 12:12:51,202 INFO    SenderThread:4193853 [sender.py:send_exit():597] send defer
+2025-08-31 12:12:51,202 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:51,203 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 0
+2025-08-31 12:12:51,203 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:51,203 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 0
+2025-08-31 12:12:51,203 INFO    SenderThread:4193853 [sender.py:transition_state():617] send defer: 1
+2025-08-31 12:12:51,203 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:51,203 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 1
+2025-08-31 12:12:51,203 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:51,203 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 1
+2025-08-31 12:12:51,203 INFO    SenderThread:4193853 [sender.py:transition_state():617] send defer: 2
+2025-08-31 12:12:51,203 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:51,203 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 2
+2025-08-31 12:12:51,204 INFO    HandlerThread:4193853 [system_monitor.py:finish():203] Stopping system monitor
+2025-08-31 12:12:51,204 DEBUG   SystemMonitor:4193853 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-08-31 12:12:51,204 DEBUG   SystemMonitor:4193853 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-08-31 12:12:51,204 DEBUG   SystemMonitor:4193853 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-08-31 12:12:51,205 INFO    HandlerThread:4193853 [interfaces.py:finish():202] Joined cpu monitor
+2025-08-31 12:12:51,206 INFO    HandlerThread:4193853 [interfaces.py:finish():202] Joined disk monitor
+2025-08-31 12:12:52,087 INFO    Thread-12 :4193853 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/wandb-summary.json
+2025-08-31 12:12:52,205 INFO    HandlerThread:4193853 [interfaces.py:finish():202] Joined gpu monitor
+2025-08-31 12:12:52,206 INFO    HandlerThread:4193853 [interfaces.py:finish():202] Joined memory monitor
+2025-08-31 12:12:52,206 INFO    HandlerThread:4193853 [interfaces.py:finish():202] Joined network monitor
+2025-08-31 12:12:52,207 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: poll_exit
+2025-08-31 12:12:52,208 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:52,208 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 2
+2025-08-31 12:12:52,208 INFO    SenderThread:4193853 [sender.py:transition_state():617] send defer: 3
+2025-08-31 12:12:52,208 DEBUG   SenderThread:4193853 [sender.py:send():382] send: stats
+2025-08-31 12:12:52,209 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: poll_exit
+2025-08-31 12:12:52,209 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:52,210 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 3
+2025-08-31 12:12:52,210 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:52,210 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 3
+2025-08-31 12:12:52,210 INFO    SenderThread:4193853 [sender.py:transition_state():617] send defer: 4
+2025-08-31 12:12:52,210 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:52,210 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 4
+2025-08-31 12:12:52,210 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:52,210 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 4
+2025-08-31 12:12:52,210 INFO    SenderThread:4193853 [sender.py:transition_state():617] send defer: 5
+2025-08-31 12:12:52,210 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:52,210 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 5
+2025-08-31 12:12:52,211 DEBUG   SenderThread:4193853 [sender.py:send():382] send: summary
+2025-08-31 12:12:52,211 INFO    SenderThread:4193853 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2025-08-31 12:12:52,211 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:52,211 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 5
+2025-08-31 12:12:52,211 INFO    SenderThread:4193853 [sender.py:transition_state():617] send defer: 6
+2025-08-31 12:12:52,212 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:52,212 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 6
+2025-08-31 12:12:52,212 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:52,212 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 6
+2025-08-31 12:12:52,215 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: status_report
+2025-08-31 12:12:52,502 INFO    SenderThread:4193853 [sender.py:transition_state():617] send defer: 7
+2025-08-31 12:12:52,503 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:52,503 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 7
+2025-08-31 12:12:52,503 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:52,503 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 7
+2025-08-31 12:12:53,088 INFO    Thread-12 :4193853 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/wandb-summary.json
+2025-08-31 12:12:53,089 INFO    Thread-12 :4193853 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/output.log
+2025-08-31 12:12:53,089 INFO    Thread-12 :4193853 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/config.yaml
+2025-08-31 12:12:53,202 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: poll_exit
+2025-08-31 12:12:54,714 INFO    SenderThread:4193853 [sender.py:transition_state():617] send defer: 8
+2025-08-31 12:12:54,714 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: poll_exit
+2025-08-31 12:12:54,714 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:54,714 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 8
+2025-08-31 12:12:54,715 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:54,715 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 8
+2025-08-31 12:12:54,715 INFO    SenderThread:4193853 [job_builder.py:build():298] Attempting to build job artifact
+2025-08-31 12:12:54,716 INFO    SenderThread:4193853 [job_builder.py:_get_source_type():428] is repo sourced job
+2025-08-31 12:12:54,751 INFO    SenderThread:4193853 [job_builder.py:build():404] adding wandb-job metadata file
+2025-08-31 12:12:54,754 INFO    SenderThread:4193853 [sender.py:transition_state():617] send defer: 9
+2025-08-31 12:12:54,754 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:54,755 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 9
+2025-08-31 12:12:54,797 DEBUG   SenderThread:4193853 [sender.py:send():382] send: artifact
+2025-08-31 12:12:55,089 INFO    Thread-12 :4193853 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/output.log
+2025-08-31 12:12:56,034 INFO    SenderThread:4193853 [sender.py:send_artifact():1470] sent artifact job-https___github.com_ZixuanLi2004_Robotwin_hpt.git_RoboTwin_policy_HPT_train.py - {'id': 'QXJ0aWZhY3Q6MjAwNDg5MTYwNg==', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjcyMjUwNTEyOA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MjAwNDg5MTYwNg==', 'versionIndex': 5}}}
+2025-08-31 12:12:56,035 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:56,035 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 9
+2025-08-31 12:12:56,035 INFO    SenderThread:4193853 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-08-31 12:12:56,090 INFO    SenderThread:4193853 [dir_watcher.py:finish():388] scan: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files
+2025-08-31 12:12:56,090 INFO    SenderThread:4193853 [dir_watcher.py:finish():402] scan save: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/requirements.txt requirements.txt
+2025-08-31 12:12:56,091 INFO    SenderThread:4193853 [dir_watcher.py:finish():402] scan save: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/conda-environment.yaml conda-environment.yaml
+2025-08-31 12:12:56,091 INFO    SenderThread:4193853 [dir_watcher.py:finish():402] scan save: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/config.yaml config.yaml
+2025-08-31 12:12:56,094 INFO    SenderThread:4193853 [dir_watcher.py:finish():402] scan save: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/wandb-metadata.json wandb-metadata.json
+2025-08-31 12:12:56,095 INFO    SenderThread:4193853 [dir_watcher.py:finish():402] scan save: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/wandb-summary.json wandb-summary.json
+2025-08-31 12:12:56,095 INFO    SenderThread:4193853 [dir_watcher.py:finish():402] scan save: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/output.log output.log
+2025-08-31 12:12:56,098 INFO    SenderThread:4193853 [sender.py:transition_state():617] send defer: 10
+2025-08-31 12:12:56,099 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:56,099 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 10
+2025-08-31 12:12:56,103 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:56,103 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 10
+2025-08-31 12:12:56,104 INFO    SenderThread:4193853 [file_pusher.py:finish():175] shutting down file pusher
+2025-08-31 12:12:56,405 ERROR   wandb-upload_0:4193853 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/wanweijie2005-/hpt-transfer/uvcg3rt3/requirements.txt?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250831%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250831T041256Z&X-Goog-Expires=86399&X-Goog-Signature=b83316c9462d3a486a3dba79e6791d61c905aa06c009bd5a935abd0dcce1a54248b01e7203daedc09a5dff79c6f14ff90722dbf540c885f67ffa2cc751c6d39f460dac2d70fdb1d00cd2a160820942aa613c7f001302dcbe5723bf261cd94a32d0a7c7ef2c7c957d996089438c0a16d88aadadb24e684770e1b0cd8967181773a500d6de112fcc79c88d3573b7a73b3a78bc0c0c8397e01edd8f96ed1573ff0ddfc4038247a6471ce860fd7ac3ed7b44ea7f587908fa081d93140db2a768b31fac23c882c11665bbaa4c720412fc80006903ce32bf4c78f8279c06febd2f60043e63fa6894bca43f886005abf7c1cc4f4cebdcadf000e63e0503f19be4f7ed88&X-Goog-SignedHeaders=host&X-User=wanweijie2005: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-08-31 12:12:56,405 ERROR   wandb-upload_0:4193853 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4520'}
+2025-08-31 12:12:56,405 ERROR   wandb-upload_0:4193853 [internal_api.py:upload_file():2765] upload_file response body: 
+2025-08-31 12:12:56,692 ERROR   wandb-upload_4:4193853 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/wanweijie2005-/hpt-transfer/uvcg3rt3/output.log?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250831%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250831T041256Z&X-Goog-Expires=86399&X-Goog-Signature=c4682fdb48a0aaaef5823fea6275817ffa0d450e58b823adefac8f61e795a67c026bbb3759f35632799a74bef4c44ed7219d92c8ada15cb9d5336be231144c6b37bd62c5d9935c1afda81047a6a8acf1684e6e45b81e11a2ecaae69055db2f1e93dfcb305fcc9ba744c55b3b18c69e03d4714a1fdbaf41c7d98606f7bab30fda69d046e3e9d56c7de88a7bd90f0358a12c62e869fe67a3d32fc16a4547a50880b851c91bbd9ec65527535a778e3c3fcf5db997548449c76be6bbb5d13560b6abcd3b1c1033fab0565b2058d100162952728ef9ad552f537dc2dcc933290484eb220daffb2cbaf5258480cd16fad34573ab3b9155fccd4d6f6d3c60436a20bc76&X-Goog-SignedHeaders=host&X-User=wanweijie2005: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-08-31 12:12:56,692 ERROR   wandb-upload_4:4193853 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '15502'}
+2025-08-31 12:12:56,692 ERROR   wandb-upload_4:4193853 [internal_api.py:upload_file():2765] upload_file response body: 
+2025-08-31 12:12:56,729 INFO    wandb-upload_1:4193853 [upload_job.py:push():131] Uploaded file /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/conda-environment.yaml
+2025-08-31 12:12:57,015 INFO    wandb-upload_3:4193853 [upload_job.py:push():131] Uploaded file /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/wandb-summary.json
+2025-08-31 12:12:57,804 INFO    wandb-upload_0:4193853 [upload_job.py:push():131] Uploaded file /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/requirements.txt
+2025-08-31 12:12:58,069 INFO    wandb-upload_2:4193853 [upload_job.py:push():131] Uploaded file /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/config.yaml
+2025-08-31 12:12:58,205 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: keepalive
+2025-08-31 12:12:58,518 INFO    wandb-upload_4:4193853 [upload_job.py:push():131] Uploaded file /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/files/output.log
+2025-08-31 12:12:58,718 INFO    Thread-11 (_thread_body):4193853 [sender.py:transition_state():617] send defer: 11
+2025-08-31 12:12:58,719 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:58,719 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 11
+2025-08-31 12:12:58,720 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:58,720 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 11
+2025-08-31 12:12:58,720 INFO    SenderThread:4193853 [file_pusher.py:join():181] waiting for file pusher
+2025-08-31 12:12:58,720 INFO    SenderThread:4193853 [sender.py:transition_state():617] send defer: 12
+2025-08-31 12:12:58,720 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:58,721 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 12
+2025-08-31 12:12:58,721 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:58,721 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 12
+2025-08-31 12:12:58,721 INFO    SenderThread:4193853 [file_stream.py:finish():595] file stream finish called
+2025-08-31 12:12:59,010 INFO    SenderThread:4193853 [file_stream.py:finish():599] file stream finish is done
+2025-08-31 12:12:59,011 INFO    SenderThread:4193853 [sender.py:transition_state():617] send defer: 13
+2025-08-31 12:12:59,011 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:59,011 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 13
+2025-08-31 12:12:59,012 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:59,012 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 13
+2025-08-31 12:12:59,012 INFO    SenderThread:4193853 [sender.py:transition_state():617] send defer: 14
+2025-08-31 12:12:59,012 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: defer
+2025-08-31 12:12:59,012 INFO    HandlerThread:4193853 [handler.py:handle_request_defer():172] handle defer: 14
+2025-08-31 12:12:59,013 DEBUG   SenderThread:4193853 [sender.py:send():382] send: final
+2025-08-31 12:12:59,013 DEBUG   SenderThread:4193853 [sender.py:send():382] send: footer
+2025-08-31 12:12:59,013 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: defer
+2025-08-31 12:12:59,013 INFO    SenderThread:4193853 [sender.py:send_request_defer():613] handle sender defer: 14
+2025-08-31 12:12:59,014 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: poll_exit
+2025-08-31 12:12:59,015 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: poll_exit
+2025-08-31 12:12:59,015 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: server_info
+2025-08-31 12:12:59,015 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: server_info
+2025-08-31 12:12:59,017 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: get_summary
+2025-08-31 12:12:59,017 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: sampled_history
+2025-08-31 12:12:59,017 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: internal_messages
+2025-08-31 12:12:59,018 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: job_info
+2025-08-31 12:12:59,249 DEBUG   SenderThread:4193853 [sender.py:send_request():409] send_request: job_info
+2025-08-31 12:12:59,251 INFO    MainThread:4193853 [wandb_run.py:_footer_history_summary_info():3837] rendering history
+2025-08-31 12:12:59,251 INFO    MainThread:4193853 [wandb_run.py:_footer_history_summary_info():3869] rendering summary
+2025-08-31 12:12:59,251 INFO    MainThread:4193853 [wandb_run.py:_footer_sync_info():3796] logging synced files
+2025-08-31 12:12:59,254 DEBUG   HandlerThread:4193853 [handler.py:handle_request():146] handle_request: shutdown
+2025-08-31 12:12:59,254 INFO    HandlerThread:4193853 [handler.py:finish():866] shutting down handler
+2025-08-31 12:13:00,018 INFO    WriterThread:4193853 [datastore.py:close():294] close: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250831_121238-uvcg3rt3/run-uvcg3rt3.wandb
+2025-08-31 12:13:00,250 INFO    SenderThread:4193853 [sender.py:finish():1548] shutting down sender
+2025-08-31 12:13:00,250 INFO    SenderThread:4193853 [file_pusher.py:finish():175] shutting down file pusher
+2025-08-31 12:13:00,250 INFO    SenderThread:4193853 [file_pusher.py:join():181] waiting for file pusher

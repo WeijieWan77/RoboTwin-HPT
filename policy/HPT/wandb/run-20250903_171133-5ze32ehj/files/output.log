@@ -1,0 +1,80 @@
+train policy models with pretrained: ./hpt-xlarge!
+wandb url: https://wandb.ai/wanweijie2005-/hpt-transfer/runs/5ze32ehj
+ >>>dataset_path: data/zarr_Robotwin_resnet_traj100_multiview load_from_cache: True
+> /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py(358)get_training_dataset()
+-> print(
+*** IndexError: unsupported selection item for basic indexing; expected integer or slice, got <class 'numpy.ndarray'>
+*** IndentationError: expected an indented block after 'for' statement on line 1
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 171, in <module>
+    main()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 97, in main
+    dataset = get_dataset(cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 32, in get_dataset
+    return LocalTrajDataset(**dataset_args)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 216, in __init__
+    self.get_training_dataset(val_ratio, seed)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 358, in get_training_dataset
+    print(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 358, in get_training_dataset
+    print(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/bdb.py", line 90, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/bdb.py", line 115, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 171, in <module>
+    main()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 97, in main
+    dataset = get_dataset(cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 32, in get_dataset
+    return LocalTrajDataset(**dataset_args)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 216, in __init__
+    self.get_training_dataset(val_ratio, seed)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 358, in get_training_dataset
+    print(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 358, in get_training_dataset
+    print(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/bdb.py", line 90, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/bdb.py", line 115, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit

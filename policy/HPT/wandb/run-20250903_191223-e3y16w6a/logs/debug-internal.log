@@ -1,0 +1,400 @@
+2025-09-03 19:12:23,667 INFO    StreamThr :3662010 [internal.py:wandb_internal():86] W&B internal server running at pid: 3662010, started at: 2025-09-03 19:12:23.666428
+2025-09-03 19:12:23,670 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: status
+2025-09-03 19:12:23,672 INFO    WriterThread:3662010 [datastore.py:open_for_write():85] open: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/run-e3y16w6a.wandb
+2025-09-03 19:12:23,673 DEBUG   SenderThread:3662010 [sender.py:send():382] send: header
+2025-09-03 19:12:23,675 DEBUG   SenderThread:3662010 [sender.py:send():382] send: run
+2025-09-03 19:12:23,686 INFO    SenderThread:3662010 [sender.py:_maybe_setup_resume():763] checking resume status for None/hpt-transfer/e3y16w6a
+2025-09-03 19:12:24,685 INFO    SenderThread:3662010 [dir_watcher.py:__init__():211] watching files in: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files
+2025-09-03 19:12:24,685 INFO    SenderThread:3662010 [sender.py:_start_run_threads():1136] run started: e3y16w6a with start time 1756897943.665336
+2025-09-03 19:12:24,692 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: check_version
+2025-09-03 19:12:24,692 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: check_version
+2025-09-03 19:12:24,973 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: run_start
+2025-09-03 19:12:24,988 DEBUG   HandlerThread:3662010 [system_info.py:__init__():32] System info init
+2025-09-03 19:12:24,988 DEBUG   HandlerThread:3662010 [system_info.py:__init__():47] System info init done
+2025-09-03 19:12:24,988 INFO    HandlerThread:3662010 [system_monitor.py:start():194] Starting system monitor
+2025-09-03 19:12:24,988 INFO    SystemMonitor:3662010 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-09-03 19:12:24,989 INFO    HandlerThread:3662010 [system_monitor.py:probe():214] Collecting system info
+2025-09-03 19:12:24,990 INFO    SystemMonitor:3662010 [interfaces.py:start():190] Started cpu monitoring
+2025-09-03 19:12:24,991 INFO    SystemMonitor:3662010 [interfaces.py:start():190] Started disk monitoring
+2025-09-03 19:12:24,992 INFO    SystemMonitor:3662010 [interfaces.py:start():190] Started gpu monitoring
+2025-09-03 19:12:24,993 INFO    SystemMonitor:3662010 [interfaces.py:start():190] Started memory monitoring
+2025-09-03 19:12:24,994 INFO    SystemMonitor:3662010 [interfaces.py:start():190] Started network monitoring
+2025-09-03 19:12:25,040 DEBUG   HandlerThread:3662010 [system_info.py:probe():196] Probing system
+2025-09-03 19:12:25,041 DEBUG   HandlerThread:3662010 [system_info.py:_probe_git():181] Probing git
+2025-09-03 19:12:25,048 DEBUG   HandlerThread:3662010 [system_info.py:_probe_git():189] Probing git done
+2025-09-03 19:12:25,048 DEBUG   HandlerThread:3662010 [system_info.py:probe():244] Probing system done
+2025-09-03 19:12:25,049 DEBUG   HandlerThread:3662010 [system_monitor.py:probe():223] {'os': 'Linux-6.8.0-65-generic-x86_64-with-glibc2.35', 'python': '3.10.18', 'heartbeatAt': '2025-09-03T11:12:25.040368', 'startedAt': '2025-09-03T11:12:23.660088', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py', 'codePathLocal': 'train.py', 'codePath': 'RoboTwin/policy/HPT/train.py', 'git': {'remote': 'https://github.com/ZixuanLi2004/Robotwin_hpt.git', 'commit': '916e51b13b2936933d1ad1ceb61024df3a193d2f'}, 'email': 'jiawei2006@gmail.com', 'root': '/data0/lumina/weijie/Robotwin_hpt', 'host': 'ubun', 'username': 'lumina', 'executable': '/home/lumina/miniconda3/envs/weijie_hpt/bin/python3', 'cpu_count': 64, 'cpu_count_logical': 128, 'cpu_freq': {'current': 912.9014218750001, 'min': 800.0, 'max': 3400.0}, 'cpu_freq_per_core': [{'current': 996.322, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 782.34, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 791.567, 'min': 800.0, 'max': 3400.0}, {'current': 1194.013, 'min': 800.0, 'max': 3400.0}, {'current': 1569.091, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 1158.237, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 1208.332, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 1208.54, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 792.707, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2100.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 790.844, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2600.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 828.481, 'min': 800.0, 'max': 3400.0}, {'current': 779.856, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 846.872, 'min': 800.0, 'max': 3400.0}, {'current': 774.951, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 761.23, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 792.887, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 769.853, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 797.658, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 2201.446, 'min': 800.0, 'max': 3400.0}], 'disk': {'/': {'total': 1758.3374824523926, 'used': 1600.4130783081055}}, 'gpu': 'NVIDIA GeForce RTX 4090', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}], 'memory': {'total': 1007.5125045776367}}
+2025-09-03 19:12:25,049 INFO    HandlerThread:3662010 [system_monitor.py:probe():224] Finished collecting system info
+2025-09-03 19:12:25,049 INFO    HandlerThread:3662010 [system_monitor.py:probe():227] Publishing system info
+2025-09-03 19:12:25,049 DEBUG   HandlerThread:3662010 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2025-09-03 19:12:25,049 DEBUG   HandlerThread:3662010 [system_info.py:_save_pip():68] Saving pip packages done
+2025-09-03 19:12:25,049 DEBUG   HandlerThread:3662010 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2025-09-03 19:12:25,688 INFO    Thread-12 :3662010 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/conda-environment.yaml
+2025-09-03 19:12:25,688 INFO    Thread-12 :3662010 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/requirements.txt
+2025-09-03 19:12:29,118 DEBUG   HandlerThread:3662010 [system_info.py:_save_conda():87] Saving conda packages done
+2025-09-03 19:12:29,121 INFO    HandlerThread:3662010 [system_monitor.py:probe():229] Finished publishing system info
+2025-09-03 19:12:29,126 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: status_report
+2025-09-03 19:12:29,127 DEBUG   SenderThread:3662010 [sender.py:send():382] send: files
+2025-09-03 19:12:29,127 INFO    SenderThread:3662010 [sender.py:_save_file():1392] saving file wandb-metadata.json with policy now
+2025-09-03 19:12:29,133 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: stop_status
+2025-09-03 19:12:29,134 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: stop_status
+2025-09-03 19:12:29,137 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: internal_messages
+2025-09-03 19:12:29,687 INFO    Thread-12 :3662010 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/conda-environment.yaml
+2025-09-03 19:12:29,687 INFO    Thread-12 :3662010 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/wandb-metadata.json
+2025-09-03 19:12:30,228 INFO    wandb-upload_0:3662010 [upload_job.py:push():131] Uploaded file /tmp/tmplbp47lovwandb/vc0fecig-wandb-metadata.json
+2025-09-03 19:12:30,918 DEBUG   SenderThread:3662010 [sender.py:send():382] send: telemetry
+2025-09-03 19:12:31,687 INFO    Thread-12 :3662010 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/output.log
+2025-09-03 19:12:33,688 INFO    Thread-12 :3662010 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/output.log
+2025-09-03 19:12:34,920 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: status_report
+2025-09-03 19:12:39,691 INFO    Thread-12 :3662010 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/output.log
+2025-09-03 19:12:40,134 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: status_report
+2025-09-03 19:12:44,133 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: stop_status
+2025-09-03 19:12:44,134 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: stop_status
+2025-09-03 19:12:44,135 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: internal_messages
+2025-09-03 19:12:45,659 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: status_report
+2025-09-03 19:12:45,704 DEBUG   SenderThread:3662010 [sender.py:send():382] send: exit
+2025-09-03 19:12:45,704 INFO    SenderThread:3662010 [sender.py:send_exit():589] handling exit code: 1
+2025-09-03 19:12:45,704 INFO    SenderThread:3662010 [sender.py:send_exit():591] handling runtime: 20
+2025-09-03 19:12:45,706 INFO    SenderThread:3662010 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2025-09-03 19:12:45,706 INFO    SenderThread:3662010 [sender.py:send_exit():597] send defer
+2025-09-03 19:12:45,706 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:12:45,706 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 0
+2025-09-03 19:12:45,707 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:12:45,707 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 0
+2025-09-03 19:12:45,707 INFO    SenderThread:3662010 [sender.py:transition_state():617] send defer: 1
+2025-09-03 19:12:45,707 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:12:45,707 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 1
+2025-09-03 19:12:45,707 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:12:45,707 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 1
+2025-09-03 19:12:45,707 INFO    SenderThread:3662010 [sender.py:transition_state():617] send defer: 2
+2025-09-03 19:12:45,707 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:12:45,707 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 2
+2025-09-03 19:12:45,707 INFO    HandlerThread:3662010 [system_monitor.py:finish():203] Stopping system monitor
+2025-09-03 19:12:45,707 DEBUG   SystemMonitor:3662010 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-09-03 19:12:45,709 INFO    HandlerThread:3662010 [interfaces.py:finish():202] Joined cpu monitor
+2025-09-03 19:12:45,709 DEBUG   SystemMonitor:3662010 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-09-03 19:12:45,710 INFO    HandlerThread:3662010 [interfaces.py:finish():202] Joined disk monitor
+2025-09-03 19:12:45,710 DEBUG   SystemMonitor:3662010 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-09-03 19:12:46,695 INFO    Thread-12 :3662010 [dir_watcher.py:_on_file_created():271] file/dir created: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/wandb-summary.json
+2025-09-03 19:12:46,925 INFO    HandlerThread:3662010 [interfaces.py:finish():202] Joined gpu monitor
+2025-09-03 19:12:46,926 INFO    HandlerThread:3662010 [interfaces.py:finish():202] Joined memory monitor
+2025-09-03 19:12:46,926 INFO    HandlerThread:3662010 [interfaces.py:finish():202] Joined network monitor
+2025-09-03 19:12:46,927 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: poll_exit
+2025-09-03 19:12:46,928 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:12:46,928 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 2
+2025-09-03 19:12:46,928 INFO    SenderThread:3662010 [sender.py:transition_state():617] send defer: 3
+2025-09-03 19:12:46,929 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:12:46,929 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 3
+2025-09-03 19:12:46,929 DEBUG   SenderThread:3662010 [sender.py:send():382] send: stats
+2025-09-03 19:12:46,931 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: poll_exit
+2025-09-03 19:12:46,932 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:12:46,932 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 3
+2025-09-03 19:12:46,932 INFO    SenderThread:3662010 [sender.py:transition_state():617] send defer: 4
+2025-09-03 19:12:46,932 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:12:46,932 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 4
+2025-09-03 19:12:46,932 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:12:46,932 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 4
+2025-09-03 19:12:46,932 INFO    SenderThread:3662010 [sender.py:transition_state():617] send defer: 5
+2025-09-03 19:12:46,932 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:12:46,932 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 5
+2025-09-03 19:12:46,933 DEBUG   SenderThread:3662010 [sender.py:send():382] send: summary
+2025-09-03 19:12:46,933 INFO    SenderThread:3662010 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2025-09-03 19:12:46,933 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:12:46,933 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 5
+2025-09-03 19:12:46,933 INFO    SenderThread:3662010 [sender.py:transition_state():617] send defer: 6
+2025-09-03 19:12:46,933 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:12:46,934 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 6
+2025-09-03 19:12:46,934 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:12:46,934 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 6
+2025-09-03 19:12:46,938 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: status_report
+2025-09-03 19:12:47,206 INFO    SenderThread:3662010 [sender.py:transition_state():617] send defer: 7
+2025-09-03 19:12:47,206 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:12:47,206 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 7
+2025-09-03 19:12:47,207 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:12:47,207 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 7
+2025-09-03 19:12:47,695 INFO    Thread-12 :3662010 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/output.log
+2025-09-03 19:12:47,696 INFO    Thread-12 :3662010 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/config.yaml
+2025-09-03 19:12:47,696 INFO    Thread-12 :3662010 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/wandb-summary.json
+2025-09-03 19:12:47,705 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: poll_exit
+2025-09-03 19:12:49,672 INFO    SenderThread:3662010 [sender.py:transition_state():617] send defer: 8
+2025-09-03 19:12:49,672 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: poll_exit
+2025-09-03 19:12:49,673 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:12:49,673 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 8
+2025-09-03 19:12:49,674 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:12:49,674 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 8
+2025-09-03 19:12:49,674 INFO    SenderThread:3662010 [job_builder.py:build():298] Attempting to build job artifact
+2025-09-03 19:12:49,675 INFO    SenderThread:3662010 [job_builder.py:_get_source_type():428] is repo sourced job
+2025-09-03 19:12:49,696 INFO    Thread-12 :3662010 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/output.log
+2025-09-03 19:12:49,711 INFO    SenderThread:3662010 [job_builder.py:build():404] adding wandb-job metadata file
+2025-09-03 19:12:49,715 INFO    SenderThread:3662010 [sender.py:transition_state():617] send defer: 9
+2025-09-03 19:12:49,715 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:12:49,716 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 9
+2025-09-03 19:12:49,716 DEBUG   SenderThread:3662010 [sender.py:send():382] send: artifact
+2025-09-03 19:12:51,472 INFO    wandb-upload_0:3662010 [upload_job.py:push():86] Skipped uploading /home/lumina/.local/share/wandb/artifacts/staging/tmp51huj08v
+2025-09-03 19:12:51,717 ERROR   wandb-upload_1:3662010 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/722505128/2011672114/c53093a8b36c6580a29875435baf3752?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250903%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250903T111251Z&X-Goog-Expires=86399&X-Goog-Signature=3bb18136b40526c71b1237edbb3aed9fa656054f9497d45b932697240ebe55152739d093bd47ee24c54b22a76b69b476a3e7d3808f65a0b60a075614de93fe26dad895941f5271acc81f5a7f2728530e6496aceb2eca1d3e648bb943b8e7570d3de1867935c833fde2f3743086a32b202d6b9907026966d2ee0bdae9ff0af581aede269a185010fcd30365981f9b6ff235b007e59793e2726f154d2c106df6d3b7c7873983547cf36174fae247db1236d64841f27934c477f288a6d6d3dc1933753f2c086cadd35932bf6edd6bac7180a6a10af2675d0aa8a179b2899b459f5cc73db4b377119fc309af7181089c87adfbcc0ed0e627c6d728ec2f10ee3cb577&X-Goog-SignedHeaders=content-md5%3Bcontent-type%3Bhost&X-User=wanweijie2005: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-09-03 19:12:51,718 ERROR   wandb-upload_1:3662010 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'xTCTqLNsZYCimHVDW683Ug==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4687'}
+2025-09-03 19:12:51,718 ERROR   wandb-upload_1:3662010 [internal_api.py:upload_file():2765] upload_file response body: 
+2025-09-03 19:12:52,709 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-03 19:12:52,917 ERROR   wandb-upload_1:3662010 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/722505128/2011672114/c53093a8b36c6580a29875435baf3752?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250903%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250903T111251Z&X-Goog-Expires=86399&X-Goog-Signature=3bb18136b40526c71b1237edbb3aed9fa656054f9497d45b932697240ebe55152739d093bd47ee24c54b22a76b69b476a3e7d3808f65a0b60a075614de93fe26dad895941f5271acc81f5a7f2728530e6496aceb2eca1d3e648bb943b8e7570d3de1867935c833fde2f3743086a32b202d6b9907026966d2ee0bdae9ff0af581aede269a185010fcd30365981f9b6ff235b007e59793e2726f154d2c106df6d3b7c7873983547cf36174fae247db1236d64841f27934c477f288a6d6d3dc1933753f2c086cadd35932bf6edd6bac7180a6a10af2675d0aa8a179b2899b459f5cc73db4b377119fc309af7181089c87adfbcc0ed0e627c6d728ec2f10ee3cb577&X-Goog-SignedHeaders=content-md5%3Bcontent-type%3Bhost&X-User=wanweijie2005: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-09-03 19:12:52,917 ERROR   wandb-upload_1:3662010 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'xTCTqLNsZYCimHVDW683Ug==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4687'}
+2025-09-03 19:12:52,917 ERROR   wandb-upload_1:3662010 [internal_api.py:upload_file():2765] upload_file response body: 
+2025-09-03 19:12:55,549 ERROR   wandb-upload_1:3662010 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/722505128/2011672114/c53093a8b36c6580a29875435baf3752?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250903%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250903T111251Z&X-Goog-Expires=86399&X-Goog-Signature=3bb18136b40526c71b1237edbb3aed9fa656054f9497d45b932697240ebe55152739d093bd47ee24c54b22a76b69b476a3e7d3808f65a0b60a075614de93fe26dad895941f5271acc81f5a7f2728530e6496aceb2eca1d3e648bb943b8e7570d3de1867935c833fde2f3743086a32b202d6b9907026966d2ee0bdae9ff0af581aede269a185010fcd30365981f9b6ff235b007e59793e2726f154d2c106df6d3b7c7873983547cf36174fae247db1236d64841f27934c477f288a6d6d3dc1933753f2c086cadd35932bf6edd6bac7180a6a10af2675d0aa8a179b2899b459f5cc73db4b377119fc309af7181089c87adfbcc0ed0e627c6d728ec2f10ee3cb577&X-Goog-SignedHeaders=content-md5%3Bcontent-type%3Bhost&X-User=wanweijie2005: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-09-03 19:12:55,550 ERROR   wandb-upload_1:3662010 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'xTCTqLNsZYCimHVDW683Ug==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4687'}
+2025-09-03 19:12:55,550 ERROR   wandb-upload_1:3662010 [internal_api.py:upload_file():2765] upload_file response body: 
+2025-09-03 19:12:55,550 INFO    wandb-upload_1:3662010 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 969, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 969, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2754, in upload_file
+    response = self._upload_file_session.put(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/adapters.py", line 659, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2785, in upload_file
+    raise _e.with_traceback(sys.exc_info()[2])
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2754, in upload_file
+    response = self._upload_file_session.put(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/adapters.py", line 659, in send
+    raise ConnectionError(err, request=request)
+wandb.sdk.lib.retry.TransientError: None
+2025-09-03 19:12:57,711 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-03 19:13:00,466 ERROR   wandb-upload_1:3662010 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/722505128/2011672114/c53093a8b36c6580a29875435baf3752?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250903%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250903T111251Z&X-Goog-Expires=86399&X-Goog-Signature=3bb18136b40526c71b1237edbb3aed9fa656054f9497d45b932697240ebe55152739d093bd47ee24c54b22a76b69b476a3e7d3808f65a0b60a075614de93fe26dad895941f5271acc81f5a7f2728530e6496aceb2eca1d3e648bb943b8e7570d3de1867935c833fde2f3743086a32b202d6b9907026966d2ee0bdae9ff0af581aede269a185010fcd30365981f9b6ff235b007e59793e2726f154d2c106df6d3b7c7873983547cf36174fae247db1236d64841f27934c477f288a6d6d3dc1933753f2c086cadd35932bf6edd6bac7180a6a10af2675d0aa8a179b2899b459f5cc73db4b377119fc309af7181089c87adfbcc0ed0e627c6d728ec2f10ee3cb577&X-Goog-SignedHeaders=content-md5%3Bcontent-type%3Bhost&X-User=wanweijie2005: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-09-03 19:13:00,466 ERROR   wandb-upload_1:3662010 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'xTCTqLNsZYCimHVDW683Ug==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4687'}
+2025-09-03 19:13:00,466 ERROR   wandb-upload_1:3662010 [internal_api.py:upload_file():2765] upload_file response body: 
+2025-09-03 19:13:02,714 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-03 19:13:07,717 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-03 19:13:11,877 INFO    wandb-upload_1:3662010 [upload_job.py:push():89] Uploaded file /home/lumina/.local/share/wandb/artifacts/staging/tmpye7ybf2c
+2025-09-03 19:13:12,720 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-03 19:13:13,672 INFO    SenderThread:3662010 [sender.py:send_artifact():1470] sent artifact job-https___github.com_ZixuanLi2004_Robotwin_hpt.git_RoboTwin_policy_HPT_train.py - {'id': 'QXJ0aWZhY3Q6MjAxMTY3MjExNA==', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjcyMjUwNTEyOA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MjAxMTM3NjY0Mw==', 'versionIndex': 7}}}
+2025-09-03 19:13:13,672 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:13:13,672 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 9
+2025-09-03 19:13:13,672 INFO    SenderThread:3662010 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-09-03 19:13:13,672 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: status_report
+2025-09-03 19:13:13,700 INFO    SenderThread:3662010 [dir_watcher.py:finish():388] scan: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files
+2025-09-03 19:13:13,701 INFO    SenderThread:3662010 [dir_watcher.py:finish():402] scan save: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/requirements.txt requirements.txt
+2025-09-03 19:13:13,701 INFO    SenderThread:3662010 [dir_watcher.py:finish():402] scan save: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/conda-environment.yaml conda-environment.yaml
+2025-09-03 19:13:13,701 INFO    SenderThread:3662010 [dir_watcher.py:finish():402] scan save: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/config.yaml config.yaml
+2025-09-03 19:13:13,702 INFO    SenderThread:3662010 [dir_watcher.py:finish():402] scan save: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/wandb-metadata.json wandb-metadata.json
+2025-09-03 19:13:13,702 INFO    SenderThread:3662010 [dir_watcher.py:finish():402] scan save: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/wandb-summary.json wandb-summary.json
+2025-09-03 19:13:13,702 INFO    SenderThread:3662010 [dir_watcher.py:finish():402] scan save: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/output.log output.log
+2025-09-03 19:13:13,702 INFO    SenderThread:3662010 [sender.py:transition_state():617] send defer: 10
+2025-09-03 19:13:13,703 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:13:13,713 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 10
+2025-09-03 19:13:13,715 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:13:13,718 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 10
+2025-09-03 19:13:13,718 INFO    SenderThread:3662010 [file_pusher.py:finish():175] shutting down file pusher
+2025-09-03 19:13:14,496 ERROR   wandb-upload_4:3662010 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/wanweijie2005-/hpt-transfer/e3y16w6a/output.log?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250903%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250903T111314Z&X-Goog-Expires=86399&X-Goog-Signature=2b175ddcc03106e0a5923d8af2fc5620aa565bef659757a75eebbf1967e069993cc20c36e475e872089c0d87c3bbfebdf60ab53ad12acf1ef54873793df9176872538e97184fdab0c9cdc2cf095324c599edceffa8f47e6abb9b98c3af3f240a0a6e4387c72bcf92d2ba9262b69bc4d94e12771442e2a2233a0f0b0b86dcb78bc66f7dae5715a56f968b481c56ada09525d14699addef50e68ae1c5ff27cfa043dacf19c549a43de25ebff725374991ef8d90e7c67f671f35ac6d7a023c18d435066251aae8945c613a62b6d062bec5a82b44082a6002df272512a86b4621c0b764296bbc4a7dce65631dae61222d9da34af1ffb8a87ac11bb79a7557c1ff2a2&X-Goog-SignedHeaders=host&X-User=wanweijie2005: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-09-03 19:13:14,496 ERROR   wandb-upload_4:3662010 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4501'}
+2025-09-03 19:13:14,496 ERROR   wandb-upload_4:3662010 [internal_api.py:upload_file():2765] upload_file response body: 
+2025-09-03 19:13:14,502 ERROR   wandb-upload_2:3662010 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/wanweijie2005-/hpt-transfer/e3y16w6a/requirements.txt?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250903%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250903T111314Z&X-Goog-Expires=86399&X-Goog-Signature=4fafe7f7b0c2e98f2d55b45507cb85b9a3355fa5da1f0fa0e3e8fb38f0ca7ff871d7457acf313c7f0df364881641a7c71a53203ae5c8e1f18a69b56366ed903ac72bc686854abefafa4fe04c9eebfe3f55ac1f24c6428aa831895fe9b4dcf3c5d45fa781c7793282b6e042101dfb5e0ad37e0303e655778b1f3606929f41121edf4181b471bad8b7d969766eba826d152145b77127d632e6e188744df1eb3b76e543602cf48165f0058ca052151e4e5bb25780c8f537ebf7045e0f722fd9da319cf67b3f25e9bbf1603b4fbc91e04696352fbea8a29565023138c1b1eb269012eb322dcb0d0b3c8788d92b4e0ca820827ced8a313e108581c96fdfbea26fde1c&X-Goog-SignedHeaders=host&X-User=wanweijie2005: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-09-03 19:13:14,502 ERROR   wandb-upload_2:3662010 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4687'}
+2025-09-03 19:13:14,502 ERROR   wandb-upload_2:3662010 [internal_api.py:upload_file():2765] upload_file response body: 
+2025-09-03 19:13:14,607 INFO    wandb-upload_0:3662010 [upload_job.py:push():131] Uploaded file /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/conda-environment.yaml
+2025-09-03 19:13:15,539 INFO    wandb-upload_3:3662010 [upload_job.py:push():131] Uploaded file /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/wandb-summary.json
+2025-09-03 19:13:15,769 ERROR   wandb-upload_2:3662010 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/wanweijie2005-/hpt-transfer/e3y16w6a/requirements.txt?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250903%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250903T111314Z&X-Goog-Expires=86399&X-Goog-Signature=4fafe7f7b0c2e98f2d55b45507cb85b9a3355fa5da1f0fa0e3e8fb38f0ca7ff871d7457acf313c7f0df364881641a7c71a53203ae5c8e1f18a69b56366ed903ac72bc686854abefafa4fe04c9eebfe3f55ac1f24c6428aa831895fe9b4dcf3c5d45fa781c7793282b6e042101dfb5e0ad37e0303e655778b1f3606929f41121edf4181b471bad8b7d969766eba826d152145b77127d632e6e188744df1eb3b76e543602cf48165f0058ca052151e4e5bb25780c8f537ebf7045e0f722fd9da319cf67b3f25e9bbf1603b4fbc91e04696352fbea8a29565023138c1b1eb269012eb322dcb0d0b3c8788d92b4e0ca820827ced8a313e108581c96fdfbea26fde1c&X-Goog-SignedHeaders=host&X-User=wanweijie2005: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-09-03 19:13:15,769 ERROR   wandb-upload_2:3662010 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4687'}
+2025-09-03 19:13:15,769 ERROR   wandb-upload_2:3662010 [internal_api.py:upload_file():2765] upload_file response body: 
+2025-09-03 19:13:15,769 INFO    wandb-upload_2:3662010 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 969, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 969, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2754, in upload_file
+    response = self._upload_file_session.put(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/adapters.py", line 659, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2785, in upload_file
+    raise _e.with_traceback(sys.exc_info()[2])
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2754, in upload_file
+    response = self._upload_file_session.put(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/adapters.py", line 659, in send
+    raise ConnectionError(err, request=request)
+wandb.sdk.lib.retry.TransientError: None
+2025-09-03 19:13:15,897 INFO    wandb-upload_1:3662010 [upload_job.py:push():131] Uploaded file /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/config.yaml
+2025-09-03 19:13:16,201 INFO    wandb-upload_4:3662010 [upload_job.py:push():131] Uploaded file /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/output.log
+2025-09-03 19:13:17,724 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-03 19:13:18,476 INFO    wandb-upload_2:3662010 [upload_job.py:push():131] Uploaded file /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/files/requirements.txt
+2025-09-03 19:13:18,677 INFO    Thread-11 (_thread_body):3662010 [sender.py:transition_state():617] send defer: 11
+2025-09-03 19:13:18,678 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:13:18,678 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 11
+2025-09-03 19:13:18,679 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:13:18,679 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 11
+2025-09-03 19:13:18,679 INFO    SenderThread:3662010 [file_pusher.py:join():181] waiting for file pusher
+2025-09-03 19:13:18,679 INFO    SenderThread:3662010 [sender.py:transition_state():617] send defer: 12
+2025-09-03 19:13:18,680 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:13:18,680 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 12
+2025-09-03 19:13:18,680 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: status_report
+2025-09-03 19:13:18,680 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:13:18,680 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 12
+2025-09-03 19:13:18,680 INFO    SenderThread:3662010 [file_stream.py:finish():595] file stream finish called
+2025-09-03 19:13:19,216 INFO    SenderThread:3662010 [file_stream.py:finish():599] file stream finish is done
+2025-09-03 19:13:19,216 INFO    SenderThread:3662010 [sender.py:transition_state():617] send defer: 13
+2025-09-03 19:13:19,216 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:13:19,216 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 13
+2025-09-03 19:13:19,217 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:13:19,217 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 13
+2025-09-03 19:13:19,217 INFO    SenderThread:3662010 [sender.py:transition_state():617] send defer: 14
+2025-09-03 19:13:19,217 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: defer
+2025-09-03 19:13:19,217 INFO    HandlerThread:3662010 [handler.py:handle_request_defer():172] handle defer: 14
+2025-09-03 19:13:19,218 DEBUG   SenderThread:3662010 [sender.py:send():382] send: final
+2025-09-03 19:13:19,218 DEBUG   SenderThread:3662010 [sender.py:send():382] send: footer
+2025-09-03 19:13:19,218 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: defer
+2025-09-03 19:13:19,218 INFO    SenderThread:3662010 [sender.py:send_request_defer():613] handle sender defer: 14
+2025-09-03 19:13:19,219 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: poll_exit
+2025-09-03 19:13:19,219 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: poll_exit
+2025-09-03 19:13:19,220 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: server_info
+2025-09-03 19:13:19,220 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: server_info
+2025-09-03 19:13:19,222 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: get_summary
+2025-09-03 19:13:19,222 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: sampled_history
+2025-09-03 19:13:19,223 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: internal_messages
+2025-09-03 19:13:19,223 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: job_info
+2025-09-03 19:13:19,465 DEBUG   SenderThread:3662010 [sender.py:send_request():409] send_request: job_info
+2025-09-03 19:13:19,466 INFO    MainThread:3662010 [wandb_run.py:_footer_history_summary_info():3837] rendering history
+2025-09-03 19:13:19,466 INFO    MainThread:3662010 [wandb_run.py:_footer_history_summary_info():3869] rendering summary
+2025-09-03 19:13:19,467 INFO    MainThread:3662010 [wandb_run.py:_footer_sync_info():3796] logging synced files
+2025-09-03 19:13:19,467 DEBUG   HandlerThread:3662010 [handler.py:handle_request():146] handle_request: shutdown
+2025-09-03 19:13:19,468 INFO    HandlerThread:3662010 [handler.py:finish():866] shutting down handler
+2025-09-03 19:13:20,223 INFO    WriterThread:3662010 [datastore.py:close():294] close: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250903_191223-e3y16w6a/run-e3y16w6a.wandb
+2025-09-03 19:13:20,466 INFO    SenderThread:3662010 [sender.py:finish():1548] shutting down sender
+2025-09-03 19:13:20,466 INFO    SenderThread:3662010 [file_pusher.py:finish():175] shutting down file pusher
+2025-09-03 19:13:20,466 INFO    SenderThread:3662010 [file_pusher.py:join():181] waiting for file pusher

@@ -1,0 +1,65 @@
+train policy models with pretrained: ./hpt-xlarge!
+wandb url: https://wandb.ai/wanweijie2005-/hpt-transfer/runs/k6l1pdbq
+ >>>dataset_path: data/zarr_Robotwin_resnet_traj100_multiview load_from_cache: False
+Number of samples in Robotwin train split: 100
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 171, in <module>
+    main()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 97, in main
+    dataset = get_dataset(cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 32, in get_dataset
+    return LocalTrajDataset(**dataset_args)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 214, in __init__
+    self.create_replaybuffer_from_env(env_rollout_fn)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 267, in create_replaybuffer_from_env
+    for traj_idx, episode in enumerate(dataset_iter):
+TypeError: 'function' object is not iterable
+Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 171, in <module>
+    main()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 97, in main
+    dataset = get_dataset(cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 32, in get_dataset
+    return LocalTrajDataset(**dataset_args)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 214, in __init__
+    self.create_replaybuffer_from_env(env_rollout_fn)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 267, in create_replaybuffer_from_env
+    for traj_idx, episode in enumerate(dataset_iter):
+TypeError: 'function' object is not iterable

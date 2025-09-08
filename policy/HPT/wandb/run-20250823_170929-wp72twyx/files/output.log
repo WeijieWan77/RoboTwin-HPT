@@ -1,0 +1,1096 @@
+train policy models with pretrained: ./hpt-xlarge!
+wandb url: https://wandb.ai/honghaosu2006-szu/hpt-transfer/runs/wp72twyx
+ >>>dataset_path: data/zarr_Robotwin_resnet_traj50_multiview load_from_cache: False
+Number of samples in Robotwin train split: 50
+Found cached data at ./processed_data/robotwin_place_object_scale_demo_clean_50, loading...
+Loaded 50 episodes from ./processed_data/robotwin_place_object_scale_demo_clean_50
+---------------
+add episode failed: 0 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 1 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 2 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 3 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 4 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 5 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 6 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 7 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 8 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 9 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 10 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 11 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 12 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 13 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 14 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 15 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 16 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 17 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 18 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 19 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 20 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 21 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 22 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 23 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 24 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 25 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 26 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 27 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 28 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 29 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 30 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 31 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 32 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 33 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 34 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 35 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 36 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 37 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 38 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 39 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 40 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 41 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 42 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 43 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 44 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 45 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 46 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 47 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 48 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+---------------
+add episode failed: 49 Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 103, in process_dataset_step
+    step_dict["language"] = utils.get_t5_embeddings(language, per_token=True, device="cpu")
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 382, in get_t5_embeddings
+    global_language_model = T5Model.from_pretrained("t5-base").to(device)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2942, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 615, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 644, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/configuration_utils.py", line 699, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/transformers/utils/hub.py", line 360, in cached_file
+    raise EnvironmentError(
+OSError: t5-base does not appear to have a file named config.json. Checkout 'https://huggingface.co/t5-base/main' for available files.
+Avg 0 traj length: nan Total: 0
+dataset time: 10.015
+/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 159, in <module>
+    main()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 53, in main
+    dataset = get_dataset(cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 30, in get_dataset
+    return LocalTrajDataset(**dataset_args)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 216, in __init__
+    self.get_training_dataset(val_ratio, seed)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 334, in get_training_dataset
+    self.val_mask = get_val_mask(n_episodes=self.replay_buffer.n_episodes, val_ratio=val_ratio, seed=seed)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/sampler.py", line 60, in get_val_mask
+    val_idxs = rng.choice(n_episodes, size=n_val, replace=False)
+  File "_generator.pyx", line 724, in numpy.random._generator.Generator.choice
+ValueError: a must be a positive integer unless no samples are taken

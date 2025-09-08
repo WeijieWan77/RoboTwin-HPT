@@ -1,0 +1,1 @@
+{"train/loss": 0.3335123658180237, "epoch": 49, "_timestamp": 1755949986.8781056, "_runtime": 873.8955895900726, "_step": 50, "validate/epoch": 0, "validate/Robotwin_test_loss": 0.34014708548784256, "_wandb": {"runtime": 872}}

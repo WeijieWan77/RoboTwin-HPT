@@ -1,0 +1,67 @@
+train policy models with pretrained: ./hpt-xlarge!
+wandb url: https://wandb.ai/wanweijie2005-/hpt-transfer/runs/hlhmqp4g
+ >>>dataset_path: data/zarr_Robotwin_resnet_traj50_multiview load_from_cache: False
+Number of samples in Robotwin train split: 50
+Found cached data at ./processed_data/robotwin_place_object_scale_demo_clean_50, loading...
+Loaded 50 episodes from ./processed_data/robotwin_place_object_scale_demo_clean_50
+--- Monkey Patch --- Loading T5 model from local path: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/t5-base
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thouroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 241, in <module>
+    main()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 119, in main
+    dataset = get_dataset(cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 96, in get_dataset
+    return LocalTrajDataset(**dataset_args)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 214, in __init__
+    self.create_replaybuffer_from_env(env_rollout_fn)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 278, in create_replaybuffer_from_env
+    dataset_step = process_dataset_step(
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py", line 107, in process_dataset_step
+    utils.get_image_embeddings(image, image_encoder, downsample=use_ds, device="cpu")
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 290, in get_image_embeddings
+    return get_resnet_embeddings(image, device=device, downsample=downsample)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/utils/utils.py", line 442, in get_resnet_embeddings
+    output = global_vision_model.net(image_th)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torchvision/models/resnet.py", line 94, in forward
+    out = self.relu(out)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 100, in forward
+    def forward(self, input: Tensor) -> Tensor:
+KeyboardInterrupt

@@ -1,0 +1,108 @@
+2025-08-29 17:42:53,883 INFO    MainThread:1043210 [wandb_setup.py:_flush():76] Current SDK version is 0.16.1
+2025-08-29 17:42:53,883 INFO    MainThread:1043210 [wandb_setup.py:_flush():76] Configure stats pid to 1043210
+2025-08-29 17:42:53,883 INFO    MainThread:1043210 [wandb_setup.py:_flush():76] Loading settings from /home/lumina/.config/wandb/settings
+2025-08-29 17:42:53,883 INFO    MainThread:1043210 [wandb_setup.py:_flush():76] Loading settings from /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/settings
+2025-08-29 17:42:53,883 INFO    MainThread:1043210 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2025-08-29 17:42:53,883 INFO    MainThread:1043210 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2025-08-29 17:42:53,883 INFO    MainThread:1043210 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'RoboTwin/policy/HPT/train.py', 'program_abspath': '/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py', 'program': '/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py'}
+2025-08-29 17:42:53,883 INFO    MainThread:1043210 [wandb_init.py:_log_setup():524] Logging user logs to /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250829_174253-0wpugb9n/logs/debug.log
+2025-08-29 17:42:53,883 INFO    MainThread:1043210 [wandb_init.py:_log_setup():525] Logging internal logs to /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/wandb/run-20250829_174253-0wpugb9n/logs/debug-internal.log
+2025-08-29 17:42:53,884 INFO    MainThread:1043210 [wandb_init.py:init():564] calling init triggers
+2025-08-29 17:42:53,884 INFO    MainThread:1043210 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {'seed': 42, 'output_dir': './output/hpt_train', 'domains': 'Robotwin', 'wb_tag': 'hpt_exp', 'log_interval': 10, 'script_name': 'hpt_train', 'pretrained_dir': './hpt-xlarge', 'parallel_eval': False, 'task_name': 'place_object_scale', 'task_config': 'demo_clean', 'episode_num': 50, 'processed_data_dir': './processed_data', 'total_num_traj': 100, 'dataset': {'_target_': 'hpt.dataset.local_traj_dataset.LocalTrajDataset', 'horizon': 1, 'val_ratio': 0.1, 'pad_after': 0, 'episode_cnt': 50, 'step_cnt': 32000, 'data_augmentation': False, 'use_disk': True, 'pad_before': 0, 'data_ratio': 1, 'action_horizon': 8, 'observation_horizon': 4, 'dataset_postfix': '_traj50', 'image_encoder': 'resnet', 'dataset_encoder_postfix': '_resnet', 'dataset_name': 'Robotwin', 'precompute_feat': True, 'use_multiview': True, 'normalize_state': True, 'regenerate': False, 'action_multiple_horizon': True, 'random_mask_obs': True, 'data_augment_ratio': 1, 'proprioception_expand': False, 'proprioception_expand_dim': 32, 'env_rollout_fn': {'_target_': 'policy.HPT.process_data.convert_dataset_robotwin_cached', 'task_name': 'place_object_scale', 'task_config': 'demo_clean', 'episode_num': 50, 'use_cache': True, 'save_dir': './processed_data'}}, 'network': {'_target_': 'hpt.models.policy.Policy', 'embed_dim': 768, 'num_blocks': 16, 'num_heads': 8, 'drop_path': 0.1, 'use_modality_embedding': True, 'use_domain_embedding': False, 'observation_horizon': 1, 'action_horizon': 8, 'token_postprocessing': 'mean', 'cross_stem_attention': True, 'weight_init_style': 'pytorch', 'no_trunk': False, 'finetune_encoder': False}, 'stem': {'modalities': ['image', 'state'], 'modality_embed_dim': 768, 'normalize_state': True, 'state_embedding_dim': 14, 'cross_attention': True, 'precompute_feat': True, 'image_encoder': 'resnet', 'crossattn_dim_head': 64, 'crossattn_heads': 8, 'crossattn_modality_dropout': 0.1, 'num_blocks': 1, 'observation_horizon': 4, 'masked_autoencoding': False, 'random_horizon_masking': True, 'add_pos_embedding_to_state': False, 'crossattn_latent': {'image': 16, 'state': 16, 'language': 8}, 'image': {'_target_': 'hpt.models.policy_stem.MLP', 'input_dim': 512, 'output_dim': 768, 'widths': [128], 'num_of_copy': 1}, 'state': {'_target_': 'hpt.models.policy_stem.MLP', 'input_dim': 14, 'output_dim': 768, 'widths': [128]}}, 'head': {'_target_': 'hpt.models.policy_head.MLP', 'input_dim': 768, 'tanh_end': False, 'output_dim': 112, 'widths': [256, 128], 'normalize_action': False, 'dropout': True}, 'dataloader': {'batch_size': 128, 'num_workers': 4, 'pin_memory': True, 'persistent_workers': True, 'shuffle': True, 'drop_last': False}, 'val_dataloader': {'batch_size': 128, 'num_workers': 4, 'shuffle': False, 'pin_memory': True, 'persistent_workers': True, 'drop_last': False}, 'optimizer': {'_target_': 'torch.optim.Adam', 'lr': 0.0001}, 'lr_scheduler': {'_target_': 'torch.optim.lr_scheduler.CosineAnnealingLR', 'T_max': 1000, 'eta_min': 1e-06}, 'train': {'total_epochs': 1000, 'total_iters': 2000000, 'epoch_iters': 1000, 'validation_iters': 350, 'pretrained_dir': './hpt-xlarge', 'freeze_trunk': True, 'wandb_pretrained_dir': ''}, 'optimizer_misc': {'nontrunk_lr_scale': 1.0}, 'warmup_lr': {'lr': 1e-10, 'step': 1000}, 'gpu_id': 4}
+2025-08-29 17:42:53,884 INFO    MainThread:1043210 [wandb_init.py:init():614] starting backend
+2025-08-29 17:42:53,884 INFO    MainThread:1043210 [wandb_init.py:init():618] setting up manager
+2025-08-29 17:42:53,885 INFO    MainThread:1043210 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-08-29 17:42:53,886 INFO    MainThread:1043210 [wandb_init.py:init():624] backend started and connected
+2025-08-29 17:42:53,889 INFO    MainThread:1043210 [wandb_init.py:init():716] updated telemetry
+2025-08-29 17:42:53,894 INFO    MainThread:1043210 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2025-08-29 17:43:05,294 INFO    Thread-1 (wrapped_target):1043210 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 969, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 969, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 369, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/adapters.py", line 659, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-08-29 17:43:06,349 INFO    MainThread:1043210 [wandb_run.py:_on_init():2254] communicating current version
+2025-08-29 17:43:09,366 INFO    MainThread:1043210 [wandb_run.py:_on_init():2263] got version response 
+2025-08-29 17:43:09,366 INFO    MainThread:1043210 [wandb_init.py:init():800] starting run threads in backend
+2025-08-29 17:43:13,608 INFO    MainThread:1043210 [wandb_run.py:_console_start():2233] atexit reg
+2025-08-29 17:43:13,608 INFO    MainThread:1043210 [wandb_run.py:_redirect():2088] redirect: wrap_raw
+2025-08-29 17:43:13,610 INFO    MainThread:1043210 [wandb_run.py:_redirect():2153] Wrapping output streams.
+2025-08-29 17:43:13,610 INFO    MainThread:1043210 [wandb_run.py:_redirect():2178] Redirects installed.
+2025-08-29 17:43:13,611 INFO    MainThread:1043210 [wandb_init.py:init():841] run started, returning control to user process
+2025-08-29 21:28:22,960 INFO    MainThread:1043210 [wandb_run.py:_finish():1962] finishing run wanweijie2005-/hpt-transfer/0wpugb9n
+2025-08-29 21:28:22,961 INFO    MainThread:1043210 [wandb_run.py:_atexit_cleanup():2202] got exitcode: 0
+2025-08-29 21:28:22,961 INFO    MainThread:1043210 [wandb_run.py:_restore():2185] restore
+2025-08-29 21:28:22,961 INFO    MainThread:1043210 [wandb_run.py:_restore():2191] restore done
+2025-08-29 21:28:46,735 INFO    MainThread:1043210 [wandb_run.py:_footer_history_summary_info():3837] rendering history
+2025-08-29 21:28:46,737 INFO    MainThread:1043210 [wandb_run.py:_footer_history_summary_info():3869] rendering summary
+2025-08-29 21:28:46,741 INFO    MainThread:1043210 [wandb_run.py:_footer_sync_info():3796] logging synced files

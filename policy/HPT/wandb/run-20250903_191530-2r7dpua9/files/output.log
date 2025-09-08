@@ -1,0 +1,10 @@
+train policy models with pretrained: ./hpt-xlarge!
+wandb url: https://wandb.ai/wanweijie2005-/hpt-transfer/runs/2r7dpua9
+ >>>dataset_path: data/zarr_Robotwin_resnet_traj100_multiview load_from_cache: True
+> /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/dataset/local_traj_dataset.py(358)get_training_dataset()
+-> print(
+10327
+*** IndexError: unsupported selection item for basic indexing; expected integer or slice, got <class 'numpy.ndarray'>
+*** NameError: name 'self' is not defined
+70
+158.78205128205127

@@ -1,0 +1,678 @@
+train policy models with pretrained: ./hpt-xlarge!
+wandb url: https://wandb.ai/wanweijie2005-/hpt-transfer/runs/nnswwkgw
+ >>>dataset_path: data/zarr_Robotwin_resnet_traj50_multiview load_from_cache: True
+Robotwin size: 6086 episodes: 50 train: 45 eval: 5
+data keys: KeysView(<zarr.hierarchy.Group '/data' read-only>)
+Using device: cuda
+load pretrained trunk config
+  0%|                                                                                                                                                          | 0/1000 [00:00<?, ?it/s]
+  0%|                                                                                                                                                            | 0/48 [00:00<?, ?it/s]
+load trunk from local disk
+normalizer action stats min: Parameter containing:
+tensor([-0.8762,  0.0000,  0.0000, -1.7300, -0.0406, -2.3191,  0.0000,  0.0000,
+         0.0000,  0.0000, -1.8668, -0.0369, -2.9199,  0.0000])
+normalizer action stats max: Parameter containing:
+tensor([0.0000, 2.4783, 2.6188, 0.0000, 0.0772, 2.5356, 1.0000, 0.8395, 2.6848,
+        3.0897, 0.0000, 0.0630, 1.2573, 1.0000])
+normalizer state stats min: Parameter containing:
+tensor([-0.8762,  0.0000,  0.0000, -1.7300, -0.0406, -2.3191,  0.0000,  0.0000,
+         0.0000,  0.0000, -1.8668, -0.0369, -2.9199,  0.0000])
+normalizer state stats max: Parameter containing:
+tensor([0.0000, 2.4783, 2.6188, 0.0000, 0.0772, 2.5356, 1.0000, 0.8395, 2.6848,
+        3.0897, 0.0000, 0.0630, 1.2573, 1.0000])
+trunk frozen
+==========================================
+number of total params (M): 3.684 stem: 3.438 trunk: 0.000 head: 0.244 encoder: 0.000
+====================================================
+============ Full Model Architecture ============
+====================================================
+Policy(
+  (trunk): ModuleDict(
+    (trunk): SimpleTransformer(
+      (pre_transformer_layer): Sequential(
+        (0): Identity()
+        (1): EinOpsRearrange()
+      )
+      (blocks): Sequential(
+        (0): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): Identity()
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (1): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.003)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (2): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.006)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (3): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.010)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (4): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.013)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (5): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.016)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (6): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.019)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (7): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.023)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (8): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.026)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (9): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.029)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (10): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.032)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (11): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.035)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (12): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.039)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (13): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.042)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (14): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.045)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (15): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.048)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (16): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.052)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (17): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.055)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (18): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.058)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (19): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.061)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (20): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.065)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (21): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.068)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (22): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.071)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (23): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.074)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (24): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.077)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (25): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.081)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (26): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.084)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (27): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.087)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (28): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.090)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (29): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.094)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (30): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.097)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+        (31): BlockWithMasking(
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): DropPath(drop_prob=0.100)
+          (norm_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+          (norm_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        )
+      )
+      (post_transformer_layer): EinOpsRearrange()
+    )
+  )
+  (stems): ModuleDict(
+    (Robotwin_image): MLP(
+      (net): ModuleList(
+        (0-4): 5 x Sequential(
+          (0): Linear(in_features=512, out_features=128, bias=True)
+          (1): SiLU()
+          (2): Linear(in_features=128, out_features=768, bias=True)
+        )
+      )
+      (cross_attention): CrossAttention(
+        (to_q): Linear(in_features=768, out_features=512, bias=False)
+        (to_kv): Linear(in_features=768, out_features=1024, bias=False)
+        (to_out): Linear(in_features=512, out_features=768, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (Robotwin_state): MLP(
+      (net): Sequential(
+        (0): Linear(in_features=14, out_features=128, bias=True)
+        (1): SiLU()
+        (2): Linear(in_features=128, out_features=768, bias=True)
+      )
+      (cross_attention): CrossAttention(
+        (to_q): Linear(in_features=768, out_features=512, bias=False)
+        (to_kv): Linear(in_features=768, out_features=1024, bias=False)
+        (to_out): Linear(in_features=512, out_features=768, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (heads): ModuleDict(
+    (Robotwin): MLP(
+      (net): Sequential(
+        (0): Linear(in_features=768, out_features=256, bias=True)
+        (1): SiLU()
+        (2): Linear(in_features=256, out_features=128, bias=True)
+        (3): Dropout(p=0.1, inplace=False)
+        (4): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (5): SiLU()
+        (6): Linear(in_features=128, out_features=112, bias=True)
+      )
+    )
+  )
+  (normalizer): ModuleDict(
+    (Robotwin): LinearNormalizer(
+      (params_dict): ParameterDict(
+          (action): Object of type: ParameterDict
+          (state): Object of type: ParameterDict
+        (action): ParameterDict(
+            (offset): Parameter containing: [torch.cuda.FloatTensor of size 14 (cuda:0)]
+            (scale): Parameter containing: [torch.cuda.FloatTensor of size 14 (cuda:0)]
+            (input_stats): Object of type: ParameterDict
+          (input_stats): ParameterDict(
+              (max): Parameter containing: [torch.cuda.FloatTensor of size 14 (cuda:0)]
+              (mean): Parameter containing: [torch.cuda.FloatTensor of size 14 (cuda:0)]
+              (min): Parameter containing: [torch.cuda.FloatTensor of size 14 (cuda:0)]
+              (std): Parameter containing: [torch.cuda.FloatTensor of size 14 (cuda:0)]
+          )
+        )
+        (state): ParameterDict(
+            (offset): Parameter containing: [torch.cuda.FloatTensor of size 14 (cuda:0)]
+            (scale): Parameter containing: [torch.cuda.FloatTensor of size 14 (cuda:0)]
+            (input_stats): Object of type: ParameterDict
+          (input_stats): ParameterDict(
+              (max): Parameter containing: [torch.cuda.FloatTensor of size 14 (cuda:0)]
+              (mean): Parameter containing: [torch.cuda.FloatTensor of size 14 (cuda:0)]
+              (min): Parameter containing: [torch.cuda.FloatTensor of size 14 (cuda:0)]
+              (std): Parameter containing: [torch.cuda.FloatTensor of size 14 (cuda:0)]
+          )
+        )
+      )
+    )
+  )
+  (modalities_tokens): ParameterDict(
+      (image): Parameter containing: [torch.cuda.FloatTensor of size 1x1x768 (cuda:0)]
+      (state): Parameter containing: [torch.cuda.FloatTensor of size 1x1x768 (cuda:0)]
+  )
+)
+====================================================
+{'seed': 42, 'output_dir': './output/hpt_train', 'domains': 'Robotwin', 'wb_tag': 'hpt_exp', 'log_interval': 10, 'script_name': 'hpt_train', 'pretrained_dir': './hpt-xlarge', 'parallel_eval': False, 'task_name': 'place_object_scale', 'task_config': 'demo_clean', 'episode_num': 50, 'processed_data_dir': './processed_data', 'total_num_traj': 100, 'dataset': {'_target_': 'hpt.dataset.local_traj_dataset.LocalTrajDataset', 'val_ratio': 0.1, 'pad_after': 0, 'episode_cnt': 50, 'step_cnt': 32000, 'data_augmentation': False, 'use_disk': True, 'pad_before': 0, 'data_ratio': 1, 'action_horizon': 8, 'observation_horizon': 5, 'dataset_postfix': '_traj50', 'image_encoder': 'resnet', 'dataset_encoder_postfix': '_resnet', 'dataset_name': 'Robotwin', 'precompute_feat': True, 'use_multiview': True, 'normalize_state': True, 'regenerate': False, 'action_multiple_horizon': True, 'random_mask_obs': True, 'data_augment_ratio': 1, 'proprioception_expand': False, 'proprioception_expand_dim': 32, 'env_rollout_fn': {'_target_': 'policy.HPT.process_data.convert_dataset_robotwin_cached', 'task_name': 'place_object_scale', 'task_config': 'demo_clean', 'episode_num': 50, 'use_cache': True, 'save_dir': './processed_data'}}, 'network': {'_target_': 'hpt.models.policy.Policy', 'embed_dim': 768, 'num_blocks': 16, 'num_heads': 8, 'drop_path': 0.1, 'use_modality_embedding': True, 'use_domain_embedding': False, 'observation_horizon': 5, 'action_horizon': 8, 'token_postprocessing': 'mean', 'cross_stem_attention': True, 'weight_init_style': 'pytorch', 'no_trunk': False, 'finetune_encoder': False}, 'stem': {'modalities': ['image', 'state'], 'modality_embed_dim': 768, 'normalize_state': True, 'state_embedding_dim': 14, 'cross_attention': True, 'precompute_feat': True, 'image_encoder': 'resnet', 'crossattn_dim_head': 64, 'crossattn_heads': 8, 'crossattn_modality_dropout': 0.1, 'num_blocks': 1, 'observation_horizon': 5, 'masked_autoencoding': False, 'random_horizon_masking': True, 'add_pos_embedding_to_state': False, 'crossattn_latent': {'image': 16, 'state': 16, 'language': 8}, 'image': {'_target_': 'hpt.models.policy_stem.MLP', 'input_dim': 512, 'output_dim': 768, 'widths': [128], 'num_of_copy': 5}, 'state': {'_target_': 'hpt.models.policy_stem.MLP', 'input_dim': 14, 'output_dim': 768, 'widths': [128]}}, 'head': {'_target_': 'hpt.models.policy_head.MLP', 'input_dim': 768, 'tanh_end': False, 'output_dim': 112, 'widths': [256, 128], 'normalize_action': False, 'dropout': True}, 'dataloader': {'batch_size': 128, 'num_workers': 4, 'pin_memory': True, 'persistent_workers': True, 'shuffle': True, 'drop_last': False}, 'val_dataloader': {'batch_size': 128, 'num_workers': 4, 'shuffle': False, 'pin_memory': True, 'persistent_workers': True, 'drop_last': False}, 'optimizer': {'_target_': 'torch.optim.Adam', 'lr': 0.0001}, 'lr_scheduler': {'_target_': 'torch.optim.lr_scheduler.CosineAnnealingLR', 'T_max': 2000000, 'eta_min': 1e-06}, 'train': {'total_epochs': 1000, 'total_iters': 2000000, 'epoch_iters': 1000, 'validation_iters': 350, 'pretrained_dir': './hpt-xlarge', 'freeze_trunk': True, 'wandb_pretrained_dir': ''}, 'optimizer_misc': {'nontrunk_lr_scale': 1.0}, 'warmup_lr': {'lr': 1e-10, 'step': 1000}, 'gpu_id': 4}
+  0%|                                                                                                                                                          | 0/1000 [00:02<?, ?it/s]
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 180, in <module>
+    main()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 152, in main
+    train_stats = train(cfg.log_interval, policy, device, train_loader, optimizer, scheduler, epoch)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/train_test.py", line 92, in train
+    domain_loss = model.compute_loss(batch)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/models/policy.py", line 302, in compute_loss
+    features = self.forward_features(domain, data)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/models/policy.py", line 292, in forward_features
+    self.trunk_tokens = self.trunk["trunk"](self.trunk_tokens)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/models/transformer.py", line 312, in forward
+    tokens = blk(tokens, attn_mask=attn_mask)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/models/transformer.py", line 219, in forward
+    x = x + self.drop_path(self.mlp(self.norm_2(x)))
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/models/transformer.py", line 155, in forward
+    x = self.fc1(x)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 48.00 MiB. GPU 0 has a total capacity of 23.64 GiB of which 50.19 MiB is free. Process 3656181 has 18.29 GiB memory in use. Including non-PyTorch memory, this process has 5.27 GiB memory in use. Of the allocated memory 4.52 GiB is allocated by PyTorch, and 309.35 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 180, in <module>
+    main()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 152, in main
+    train_stats = train(cfg.log_interval, policy, device, train_loader, optimizer, scheduler, epoch)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/train_test.py", line 92, in train
+    domain_loss = model.compute_loss(batch)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/models/policy.py", line 302, in compute_loss
+    features = self.forward_features(domain, data)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/models/policy.py", line 292, in forward_features
+    self.trunk_tokens = self.trunk["trunk"](self.trunk_tokens)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/models/transformer.py", line 312, in forward
+    tokens = blk(tokens, attn_mask=attn_mask)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/models/transformer.py", line 219, in forward
+    x = x + self.drop_path(self.mlp(self.norm_2(x)))
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/HPT/hpt/models/transformer.py", line 155, in forward
+    x = self.fc1(x)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 48.00 MiB. GPU 0 has a total capacity of 23.64 GiB of which 50.19 MiB is free. Process 3656181 has 18.29 GiB memory in use. Including non-PyTorch memory, this process has 5.27 GiB memory in use. Of the allocated memory 4.52 GiB is allocated by PyTorch, and 309.35 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

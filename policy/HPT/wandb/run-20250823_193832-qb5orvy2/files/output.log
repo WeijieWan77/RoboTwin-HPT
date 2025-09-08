@@ -1,0 +1,164 @@
+train policy models with pretrained: ./hpt-xlarge!
+wandb url: https://wandb.ai/wanweijie2005-/hpt-transfer/runs/qb5orvy2
+ >>>dataset_path: data/zarr_Robotwin_resnet_traj50_multiview load_from_cache: False
+Number of samples in Robotwin train split: 50
+Found cached data at ./processed_data/robotwin_place_object_scale_demo_clean_50, loading...
+Loaded 50 episodes from ./processed_data/robotwin_place_object_scale_demo_clean_50
+--- Monkey Patch --- Loading T5 model from local path: /data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/t5-base
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thouroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Avg 50 traj length: 146.8 Total: 7340
+dataset time: 429.009
+Robotwin size: 6131 episodes: 50 train: 45 eval: 5
+data keys: dict_keys(['action', 'state', 'language', 'image'])
+normalizer action stats min: Parameter containing:
+tensor([-0.8762,  0.0000,  0.0000, -1.7300, -0.0406, -2.3191,  0.0000,  0.0000,
+         0.0000,  0.0000, -1.8668, -0.0369, -2.9199,  0.0000])
+normalizer action stats max: Parameter containing:
+tensor([0.0000, 2.4783, 2.6188, 0.0000, 0.0772, 2.5356, 1.0000, 0.8395, 2.6848,
+        3.0897, 0.0000, 0.0630, 1.2573, 1.0000])
+normalizer state stats min: Parameter containing:
+tensor([-0.8762,  0.0000,  0.0000, -1.7300, -0.0406, -2.3191,  0.0000,  0.0000,
+         0.0000,  0.0000, -1.8668, -0.0369, -2.9199,  0.0000])
+normalizer state stats max: Parameter containing:
+tensor([0.0000, 2.4783, 2.6188, 0.0000, 0.0772, 2.5356, 1.0000, 0.8395, 2.6848,
+        3.0897, 0.0000, 0.0630, 1.2573, 1.0000])
+Using device: cuda
+load pretrained trunk config
+  0%|                                                                                                                                                                      | 0/50 [00:00<?, ?it/s]
+load trunk from local disk
+trunk frozen
+==========================================
+number of total params (M): 3.684 stem: 3.438 trunk: 0.000 head: 0.244 encoder: 0.000
+Epoch size: 24 Traj: 50 Train: 6131 Test: 709
+Epoch 0 finished. Loss: 0.47148
+
+
+  4%|██████▎                                                                                                                                                       | 2/50 [00:19<07:45,  9.70s/it]
+
+  6%|█████████▍                                                                                                                                                    | 3/50 [00:28<07:06,  9.08s/it]
+
+  8%|████████████▋                                                                                                                                                 | 4/50 [00:36<06:50,  8.92s/it]
+Epoch 3 finished. Loss: 0.46774
+
+
+ 12%|██████████████████▉                                                                                                                                           | 6/50 [00:53<06:24,  8.75s/it]
+
+ 14%|██████████████████████                                                                                                                                        | 7/50 [01:02<06:15,  8.74s/it]
+Epoch 6 finished. Loss: 0.46550
+
+
+ 18%|████████████████████████████▍                                                                                                                                 | 9/50 [01:19<05:56,  8.69s/it]
+
+ 20%|███████████████████████████████▍                                                                                                                             | 10/50 [01:28<05:45,  8.65s/it]
+Epoch 9 finished. Loss: 0.46363
+
+
+ 24%|█████████████████████████████████████▋                                                                                                                       | 12/50 [01:45<05:27,  8.61s/it]
+
+ 26%|████████████████████████████████████████▊                                                                                                                    | 13/50 [01:54<05:19,  8.63s/it]
+Epoch 12 finished. Loss: 0.45127
+
+
+ 30%|███████████████████████████████████████████████                                                                                                              | 15/50 [02:11<05:02,  8.65s/it]
+
+ 32%|██████████████████████████████████████████████████▏                                                                                                          | 16/50 [02:20<04:55,  8.68s/it]
+Epoch 15 finished. Loss: 0.45411
+
+
+ 36%|████████████████████████████████████████████████████████▌                                                                                                    | 18/50 [02:37<04:37,  8.67s/it]
+
+ 38%|███████████████████████████████████████████████████████████▋                                                                                                 | 19/50 [02:46<04:29,  8.68s/it]
+Epoch 18 finished. Loss: 0.43870
+
+
+ 42%|█████████████████████████████████████████████████████████████████▉                                                                                           | 21/50 [03:03<04:12,  8.70s/it]
+
+ 44%|█████████████████████████████████████████████████████████████████████                                                                                        | 22/50 [03:12<04:05,  8.77s/it]
+
+ 46%|████████████████████████████████████████████████████████████████████████▏                                                                                    | 23/50 [03:21<03:56,  8.77s/it]
+
+ 48%|███████████████████████████████████████████████████████████████████████████▎                                                                                 | 24/50 [03:30<03:47,  8.73s/it]
+
+ 50%|██████████████████████████████████████████████████████████████████████████████▌                                                                              | 25/50 [03:38<03:37,  8.71s/it]
+
+ 52%|█████████████████████████████████████████████████████████████████████████████████▋                                                                           | 26/50 [03:47<03:29,  8.71s/it]
+
+ 54%|████████████████████████████████████████████████████████████████████████████████████▊                                                                        | 27/50 [03:56<03:20,  8.71s/it]
+
+ 56%|███████████████████████████████████████████████████████████████████████████████████████▉                                                                     | 28/50 [04:04<03:11,  8.69s/it]
+
+ 58%|███████████████████████████████████████████████████████████████████████████████████████████                                                                  | 29/50 [04:13<03:02,  8.70s/it]
+
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████▏                                                              | 30/50 [04:22<02:54,  8.71s/it]
+
+ 62%|█████████████████████████████████████████████████████████████████████████████████████████████████▎                                                           | 31/50 [04:30<02:44,  8.68s/it]
+
+ 64%|████████████████████████████████████████████████████████████████████████████████████████████████████▍                                                        | 32/50 [04:39<02:36,  8.68s/it]
+
+ 66%|███████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                     | 33/50 [04:48<02:27,  8.69s/it]
+
+ 68%|██████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                  | 34/50 [04:56<02:18,  8.65s/it]
+Epoch 33 finished. Loss: 0.38591
+
+
+ 72%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                            | 36/50 [05:14<02:00,  8.62s/it]
+
+ 74%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                        | 37/50 [05:22<01:51,  8.60s/it]
+Epoch 36 finished. Loss: 0.37655
+
+
+ 78%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                  | 39/50 [05:39<01:34,  8.62s/it]
+
+ 80%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                               | 40/50 [05:48<01:25,  8.58s/it]
+
+ 82%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                            | 41/50 [05:57<01:17,  8.64s/it]
+
+ 84%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                         | 42/50 [06:05<01:09,  8.67s/it]
+
+ 86%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                      | 43/50 [06:14<01:00,  8.65s/it]
+Epoch 42 finished. Loss: 0.35406
+
+
+ 90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎               | 45/50 [06:32<00:43,  8.71s/it]
+
+ 92%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍            | 46/50 [06:40<00:34,  8.75s/it]
+
+ 94%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌         | 47/50 [06:49<00:26,  8.80s/it]
+
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋      | 48/50 [06:58<00:17,  8.83s/it]
+Epoch 47 finished. Loss: 0.33867
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [07:16<00:00,  8.72s/it]
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 241, in <module>
+    main()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data0/lumina/weijie/Robotwin_hpt/RoboTwin/policy/HPT/train.py", line 235, in main
+    torch.save(policy.state_dict(), policy_path)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/serialization.py", line 618, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/serialization.py", line 492, in _open_zipfile_writer
+    return container(name_or_buffer)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/torch/serialization.py", line 463, in __init__
+    super().__init__(torch._C.PyTorchFileWriter(self.name))
+RuntimeError: Parent directory ./output/hpt_train does not exist.
+Epoch 49 finished. Loss: 0.33351
