@@ -1,0 +1,121 @@
+2025-09-08 23:50:55,146 INFO    StreamThr :4114760 [internal.py:wandb_internal():86] W&B internal server running at pid: 4114760, started at: 2025-09-08 23:50:55.145560
+2025-09-08 23:50:55,149 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: status
+2025-09-08 23:50:55,153 INFO    WriterThread:4114760 [datastore.py:open_for_write():85] open: /data0/lumina/weijie/Robotwin_hpt/RoboTwin-HPT/policy/HPT/wandb/run-20250908_235055-45vin8k3/run-45vin8k3.wandb
+2025-09-08 23:50:55,154 DEBUG   SenderThread:4114760 [sender.py:send():382] send: header
+2025-09-08 23:50:55,154 DEBUG   SenderThread:4114760 [sender.py:send():382] send: run
+2025-09-08 23:50:55,163 INFO    SenderThread:4114760 [sender.py:_maybe_setup_resume():763] checking resume status for None/hpt-transfer/45vin8k3
+2025-09-08 23:51:00,155 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:51:04,187 INFO    SenderThread:4114760 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 969, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/connection.py", line 969, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 369, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/lumina/miniconda3/envs/weijie_hpt/lib/python3.10/site-packages/requests/adapters.py", line 659, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-09-08 23:51:05,156 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:51:10,157 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:51:15,158 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:51:20,159 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:51:25,160 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:51:30,161 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:51:35,162 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:51:40,163 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:51:45,164 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:51:50,165 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:51:55,166 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:52:00,167 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:52:05,168 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:52:10,169 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:52:15,170 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:52:20,171 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: keepalive
+2025-09-08 23:52:23,484 DEBUG   HandlerThread:4114760 [handler.py:handle_request():146] handle_request: shutdown
+2025-09-08 23:52:23,484 INFO    HandlerThread:4114760 [handler.py:finish():866] shutting down handler
+2025-09-08 23:52:24,163 INFO    WriterThread:4114760 [datastore.py:close():294] close: /data0/lumina/weijie/Robotwin_hpt/RoboTwin-HPT/policy/HPT/wandb/run-20250908_235055-45vin8k3/run-45vin8k3.wandb
+2025-09-09 00:07:26,893 INFO    SenderThread:4114760 [dir_watcher.py:__init__():211] watching files in: /data0/lumina/weijie/Robotwin_hpt/RoboTwin-HPT/policy/HPT/wandb/run-20250908_235055-45vin8k3/files
+2025-09-09 00:07:26,893 INFO    SenderThread:4114760 [sender.py:_start_run_threads():1136] run started: 45vin8k3 with start time 1757346655.144245
+2025-09-09 00:07:26,893 INFO    SenderThread:4114760 [sender.py:finish():1548] shutting down sender
+2025-09-09 00:07:26,894 INFO    SenderThread:4114760 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-09-09 00:07:27,893 INFO    SenderThread:4114760 [dir_watcher.py:finish():388] scan: /data0/lumina/weijie/Robotwin_hpt/RoboTwin-HPT/policy/HPT/wandb/run-20250908_235055-45vin8k3/files
+2025-09-09 00:07:27,894 INFO    SenderThread:4114760 [dir_watcher.py:finish():402] scan save: /data0/lumina/weijie/Robotwin_hpt/RoboTwin-HPT/policy/HPT/wandb/run-20250908_235055-45vin8k3/files/config.yaml config.yaml
+2025-09-09 00:07:27,894 INFO    SenderThread:4114760 [file_pusher.py:finish():175] shutting down file pusher
+2025-09-09 00:07:27,894 INFO    SenderThread:4114760 [file_pusher.py:join():181] waiting for file pusher
+2025-09-09 00:07:29,889 ERROR   wandb-upload_0:4114760 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/wanweijie2005-/hpt-transfer/45vin8k3/config.yaml?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250908%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250908T160728Z&X-Goog-Expires=86399&X-Goog-Signature=3f59d1591ffc421aaa43e1579e43a1d42b2a1d49edbce1670c0bc585d02ebe084b995291342d8236849007fe076d2fcc01ae1429bd63739e5c2c5341222571fa2af7985ca90566f20be923614ad2740fdcb49c644058f9a90dad124e29416a8e3607c1e986fa186802298769f62a15b493ee1222339e4c8f6ac08ceb5510e0d449fd4ec60fe4e2a292ef2ba12cc6505195e4ef0bc98c8f3591af5996b78d665d9b56fb894f4b736e947a1a0c31ad0bb0c05a87acdd233971f676be8a89ba097e24667891d1c42db3c3d4478db2b78d53232d789cd0239ba898b668080a7048240120a84ee9688e3cf08439122549ffd8a8e90a203f91e655ed777d7c61f43ce3&X-Goog-SignedHeaders=host&X-User=wanweijie2005: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-09-09 00:07:29,889 ERROR   wandb-upload_0:4114760 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4315'}
+2025-09-09 00:07:29,889 ERROR   wandb-upload_0:4114760 [internal_api.py:upload_file():2765] upload_file response body: 
+2025-09-09 00:07:31,336 ERROR   wandb-upload_0:4114760 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/wanweijie2005-/hpt-transfer/45vin8k3/config.yaml?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250908%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250908T160728Z&X-Goog-Expires=86399&X-Goog-Signature=3f59d1591ffc421aaa43e1579e43a1d42b2a1d49edbce1670c0bc585d02ebe084b995291342d8236849007fe076d2fcc01ae1429bd63739e5c2c5341222571fa2af7985ca90566f20be923614ad2740fdcb49c644058f9a90dad124e29416a8e3607c1e986fa186802298769f62a15b493ee1222339e4c8f6ac08ceb5510e0d449fd4ec60fe4e2a292ef2ba12cc6505195e4ef0bc98c8f3591af5996b78d665d9b56fb894f4b736e947a1a0c31ad0bb0c05a87acdd233971f676be8a89ba097e24667891d1c42db3c3d4478db2b78d53232d789cd0239ba898b668080a7048240120a84ee9688e3cf08439122549ffd8a8e90a203f91e655ed777d7c61f43ce3&X-Goog-SignedHeaders=host&X-User=wanweijie2005: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2025-09-09 00:07:31,336 ERROR   wandb-upload_0:4114760 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '4315'}
+2025-09-09 00:07:31,337 ERROR   wandb-upload_0:4114760 [internal_api.py:upload_file():2765] upload_file response body: 
+2025-09-09 00:07:34,340 INFO    wandb-upload_0:4114760 [upload_job.py:push():131] Uploaded file /data0/lumina/weijie/Robotwin_hpt/RoboTwin-HPT/policy/HPT/wandb/run-20250908_235055-45vin8k3/files/config.yaml
+2025-09-09 00:07:34,902 INFO    SenderThread:4114760 [file_stream.py:finish():595] file stream finish called
+2025-09-09 00:07:34,987 WARNING FileStreamThread:4114760 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x7ebbaa2e7e20>>, timeout=180), args: ('https://api.wandb.ai/files/wanweijie2005-/hpt-transfer/45vin8k3/file_stream',), kwargs: {'json': {'complete': True, 'exitcode': 0, 'dropped': 0, 'uploaded': ['config.yaml']}}
+2025-09-09 00:07:37,339 WARNING FileStreamThread:4114760 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x7ebbaa2e7e20>>, timeout=180), args: ('https://api.wandb.ai/files/wanweijie2005-/hpt-transfer/45vin8k3/file_stream',), kwargs: {'json': {'complete': True, 'exitcode': 0, 'dropped': 0, 'uploaded': ['config.yaml']}}
+2025-09-09 00:07:42,284 WARNING FileStreamThread:4114760 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x7ebbaa2e7e20>>, timeout=180), args: ('https://api.wandb.ai/files/wanweijie2005-/hpt-transfer/45vin8k3/file_stream',), kwargs: {'json': {'complete': True, 'exitcode': 0, 'dropped': 0, 'uploaded': ['config.yaml']}}
+2025-09-09 00:07:51,748 INFO    SenderThread:4114760 [file_stream.py:finish():599] file stream finish is done
